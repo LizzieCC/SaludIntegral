@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1036" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Actividad" representedClassName="Actividad" syncable="YES">
+        <attribute name="alarma" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="area" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="esPeriodico" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fechaProgramada" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="frecuenciaSemana" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="tieneAlarma" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tipoFrecuencia" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="titulo" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ActividadDia" representedClassName="ActividadDia" syncable="YES">
+        <attribute name="fecha" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hora" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="realizado" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="reprogramado" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actividad" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Actividad" syncable="YES"/>
+    </entity>
+    <entity name="Contacto" representedClassName="Contacto" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipo" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Sugerencia" representedClassName="Sugerencia" syncable="YES">
+        <attribute name="area" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="descripcion" attributeType="String" syncable="YES"/>
+        <attribute name="frecuenciaSemana" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="imagen" attributeType="String" syncable="YES"/>
+        <attribute name="prioridad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tipoFrecuencia" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="titulo" attributeType="String" syncable="YES"/>
+        <attribute name="video" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Actividad" positionX="-2" positionY="-72" width="128" height="163"/>
+        <element name="ActividadDia" positionX="-234" positionY="-45" width="128" height="120"/>
+        <element name="Contacto" positionX="-9" positionY="101" width="128" height="88"/>
+        <element name="Sugerencia" positionX="261" positionY="-30" width="128" height="163"/>
+    </elements>
+</model>
