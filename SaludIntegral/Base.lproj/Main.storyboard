@@ -12,10 +12,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="MainViewController" customModule="SaludIntegral" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Menu" id="BYZ-38-t0r" customClass="MainViewController" customModule="SaludIntegral" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="NYP-jG-XMV"/>
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="NYP-jG-XMV"/>
                     <connections>
                         <outlet property="btActividades" destination="T2y-it-PYI" id="M52-BW-FOo"/>
                         <outlet property="btEmergencias" destination="0Cx-NI-Mpu" id="rdz-9W-Dfi"/>
@@ -363,7 +363,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RB7-E5-1VX"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="5gF-0H-XqA"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="5gF-0H-XqA">
+                        <barButtonItem key="backBarButtonItem" title="Historial" id="Lp9-ff-fB3"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnEspiritualHist" destination="4E2-gG-NJ7" id="DOz-Sa-yNy"/>
                         <outlet property="btnFinanzasHist" destination="IA2-Xd-gVZ" id="Ruc-ot-fO7"/>
@@ -373,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPU-Dr-Dmn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1999" y="196"/>
+            <point key="canvasLocation" x="1110" y="282"/>
         </scene>
         <!--Sugerencias-->
         <scene sceneID="nfJ-Ji-zAv">
@@ -527,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kc2-pz-zqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998.75" y="-657.04225352112678"/>
+            <point key="canvasLocation" x="2224" y="-657"/>
         </scene>
         <!--Emergencias View Controller-->
         <scene sceneID="F3j-Ou-ymM">
@@ -537,8 +539,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qxc-XO-tE3">
-                                <rect key="frame" x="0.0" y="90" width="320" height="443"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qxc-XO-tE3">
+                                <rect key="frame" x="0.0" y="100" width="320" height="443"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcB-ic-hYb">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
@@ -552,13 +554,13 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8by-km-63m">
                                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="135"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casa" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-td-p6R">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteHome" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-td-p6R">
                                                                         <rect key="frame" x="15" y="8" width="130" height="99"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Familiar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-2V-aMm">
-                                                                        <rect key="frame" x="9" y="94" width="142" height="45"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Familiar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-2V-aMm">
+                                                                        <rect key="frame" x="9" y="96" width="142" height="45"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="142" id="KPD-Ki-CVZ"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="KPD-Ki-CVZ"/>
                                                                             <constraint firstAttribute="height" constant="45" id="f7J-ap-HDZ"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -629,25 +631,25 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkf-Uv-b3s">
                                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="134.5"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="medico" translatesAutoresizingMaskIntoConstraints="NO" id="I6I-4b-lw7">
-                                                                        <rect key="frame" x="23" y="8" width="114" height="90"/>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Médico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT7-jJ-y9e">
-                                                                        <rect key="frame" x="9" y="89" width="142" height="45"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Médico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT7-jJ-y9e">
+                                                                        <rect key="frame" x="9" y="95" width="142" height="45"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="7Bp-9B-hWG"/>
-                                                                            <constraint firstAttribute="width" constant="142" id="HB1-Y7-VmF"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="HB1-Y7-VmF"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor-1" translatesAutoresizingMaskIntoConstraints="NO" id="I6I-4b-lw7">
+                                                                        <rect key="frame" x="22" y="0.0" width="116" height="98"/>
+                                                                    </imageView>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="I6I-4b-lw7" firstAttribute="leading" secondItem="hkf-Uv-b3s" secondAttribute="leadingMargin" constant="15" id="FaZ-5T-6aX"/>
-                                                                    <constraint firstAttribute="trailingMargin" secondItem="I6I-4b-lw7" secondAttribute="trailing" constant="15" id="LKh-bA-wZc"/>
+                                                                    <constraint firstItem="I6I-4b-lw7" firstAttribute="leading" secondItem="hkf-Uv-b3s" secondAttribute="leadingMargin" constant="14" id="FaZ-5T-6aX"/>
+                                                                    <constraint firstAttribute="trailingMargin" secondItem="I6I-4b-lw7" secondAttribute="trailing" constant="14" id="LKh-bA-wZc"/>
                                                                     <constraint firstAttribute="bottom" secondItem="AT7-jJ-y9e" secondAttribute="bottom" constant="-5.5" id="N77-mr-YW3"/>
-                                                                    <constraint firstItem="I6I-4b-lw7" firstAttribute="top" secondItem="hkf-Uv-b3s" secondAttribute="topMargin" constant="8" id="XGH-Pt-dBh"/>
+                                                                    <constraint firstItem="I6I-4b-lw7" firstAttribute="top" secondItem="hkf-Uv-b3s" secondAttribute="topMargin" constant="-8" id="XGH-Pt-dBh"/>
                                                                     <constraint firstAttribute="bottomMargin" secondItem="I6I-4b-lw7" secondAttribute="bottom" constant="28.5" id="b0q-S5-RJN"/>
                                                                     <constraint firstItem="AT7-jJ-y9e" firstAttribute="centerX" secondItem="hkf-Uv-b3s" secondAttribute="centerX" id="tii-5b-Umb"/>
                                                                 </constraints>
@@ -706,13 +708,13 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92u-7y-uNa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="134.5"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="emergencias2" translatesAutoresizingMaskIntoConstraints="NO" id="2XK-nP-2Nn">
-                                                                        <rect key="frame" x="15" y="8" width="124" height="101"/>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emergencyContact" translatesAutoresizingMaskIntoConstraints="NO" id="2XK-nP-2Nn">
+                                                                        <rect key="frame" x="15" y="2" width="130" height="107"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" text="Emergencias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onb-rO-98N">
                                                                         <rect key="frame" x="10" y="104" width="139.5" height="30"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="139.5" id="2af-c6-3Ja"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="139.5" id="2af-c6-3Ja"/>
                                                                             <constraint firstAttribute="height" constant="30" id="XoG-Uh-px5"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -784,7 +786,6 @@
                         <viewLayoutGuide key="safeArea" id="tmj-wH-dpo"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="2gD-NR-MZh">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="SjF-vw-M5d"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="aZx-bu-ML3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pID-59-lhO">
                                 <rect key="frame" x="254" y="4.5" width="50" height="35"/>
@@ -808,7 +809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X46-Bf-Ekh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108.75" y="197.53521126760563"/>
+            <point key="canvasLocation" x="-729.375" y="282.04225352112678"/>
         </scene>
         <!--Editar Contactos View Controller-->
         <scene sceneID="RLD-0c-Pdd">
@@ -862,42 +863,42 @@
                                 <color key="textColor" red="1" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Nombre" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ozC-Xj-iXx">
+                            <textField opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ozC-Xj-iXx">
                                 <rect key="frame" x="42" y="196" width="208" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tel" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SAC-3h-dF8">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SAC-3h-dF8">
                                 <rect key="frame" x="42" y="234" width="208" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3k-Qu-dsY">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="O3k-Qu-dsY">
                                 <rect key="frame" x="42" y="326" width="208" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tel" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-do-mzP">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-do-mzP">
                                 <rect key="frame" x="42" y="364" width="208" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-ii-ELp">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-ii-ELp">
                                 <rect key="frame" x="42" y="452" width="208" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tel" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNX-cw-k6y">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HNX-cw-k6y">
                                 <rect key="frame" x="42" y="490" width="208" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -907,7 +908,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pq-Xk-6Xs">
                                 <rect key="frame" x="22" y="20" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="Atrás">
                                     <color key="titleColor" red="1" green="0.5725490196078431" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -927,7 +928,7 @@
                         <viewLayoutGuide key="safeArea" id="aXP-yZ-Gje"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem id="VLE-ox-ssw"/>
+                        <barButtonItem title="oliwis" id="VLE-ox-ssw"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -942,7 +943,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZC-Xy-weR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EyR-hd-49H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="997.5" y="196.47887323943661"/>
+            <point key="canvasLocation" x="88" y="282"/>
         </scene>
         <!--Ver Historial Table View Controller-->
         <scene sceneID="2Ts-l9-2Bg">
@@ -964,17 +965,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-a5-fo3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="91.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p2a-mQ-IdY">
-                                                    <rect key="frame" x="0.0" y="91.5" width="320" height="2"/>
-                                                    <color key="progressTintColor" red="0.57647058819999997" green="0.30588235289999999" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                </progressView>
                                             </subviews>
                                         </stackView>
+                                        <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p2a-mQ-IdY">
+                                            <rect key="frame" x="28" y="60" width="263" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="progressTintColor" red="0.57647058819999997" green="0.30588235289999999" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </progressView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="srj-I4-yGI" firstAttribute="top" secondItem="IrM-PL-YUX" secondAttribute="top" id="AvX-sG-dpb"/>
@@ -997,7 +999,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDz-ic-jsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754.375" y="194.36619718309859"/>
+            <point key="canvasLocation" x="2379.375" y="280.98591549295776"/>
         </scene>
         <!--Actividades-->
         <scene sceneID="lFB-mr-m8g">
@@ -1026,18 +1028,18 @@
                                     <outlet property="delegate" destination="HY8-dM-XZH" id="DV4-6K-9z9"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR1-Kx-oQj">
-                                <rect key="frame" x="290" y="63" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR1-Kx-oQj">
+                                <rect key="frame" x="277" y="43" width="57" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&gt;"/>
+                                <state key="normal" title="&gt;" image="next"/>
                                 <connections>
                                     <action selector="siguienteDia:" destination="HY8-dM-XZH" eventType="touchUpInside" id="0Or-cF-TU2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amg-WC-w4Q">
-                                <rect key="frame" x="0.0" y="64" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amg-WC-w4Q">
+                                <rect key="frame" x="-13" y="44" width="57" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;"/>
+                                <state key="normal" title="&lt;" image="before"/>
                                 <connections>
                                     <action selector="anteriorDia:" destination="HY8-dM-XZH" eventType="touchUpInside" id="isU-RC-qNw"/>
                                 </connections>
@@ -1067,7 +1069,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wha-yO-tW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="-1411.2676056338028"/>
+            <point key="canvasLocation" x="171" y="-1510"/>
         </scene>
         <!--Agregar Actividad View Controller-->
         <scene sceneID="a2R-QP-U1a">
@@ -1235,7 +1237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rq3-N8-egM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218.125" y="-1924.6478873239437"/>
+            <point key="canvasLocation" x="1110" y="-1511"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ptq-tw-4yS">
@@ -1353,25 +1355,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRf-t6-RzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754" y="-1197"/>
+            <point key="canvasLocation" x="3296" y="-667"/>
         </scene>
     </scenes>
     <resources>
         <image name="1AGENDA" width="766" height="1025"/>
         <image name="1HISTORIAL" width="904" height="1035"/>
         <image name="1VIDAYSALUD" width="1156" height="1062"/>
+        <image name="before" width="45" height="70"/>
         <image name="bible" width="24" height="24"/>
         <image name="brain" width="25" height="25"/>
-        <image name="casa" width="974" height="985"/>
-        <image name="emergencias2" width="979" height="979"/>
+        <image name="doctor-1" width="128" height="128"/>
         <image name="emergencias_blanco_bueno" width="1191" height="1133"/>
+        <image name="emergencyContact" width="128" height="128"/>
         <image name="flower" width="304" height="273"/>
         <image name="food" width="25" height="25"/>
-        <image name="medico" width="991" height="979"/>
         <image name="money" width="26" height="26"/>
+        <image name="next" width="45" height="70"/>
+        <image name="whiteHome" width="1065" height="1065"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o0y-ul-bx6"/>
+        <segue reference="Z4T-ty-7xj"/>
         <segue reference="wiQ-cW-tcy"/>
     </inferredMetricsTieBreakers>
 </document>
