@@ -38,6 +38,11 @@ class VerSugerenciaViewController: UIViewController {
         }
     }
     
+    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        print("si llega a unwind ver sugerencia")
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vista = segue.destination as! AgregarActividadViewController
         

@@ -469,10 +469,10 @@
             </objects>
             <point key="canvasLocation" x="1147.5" y="-657.04225352112678"/>
         </scene>
-        <!--Ver Sugerencia View Controller-->
+        <!--Ver-->
         <scene sceneID="dTj-IX-sNJ">
             <objects>
-                <viewController storyboardIdentifier="VerSugerencia" id="tVP-ac-p2R" customClass="VerSugerenciaViewController" customModule="SaludIntegral" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerSugerencia" title="Ver" id="tVP-ac-p2R" customClass="VerSugerenciaViewController" customModule="SaludIntegral" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NID-uF-FIk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -499,7 +499,7 @@
                                 </constraints>
                                 <state key="normal" title="Agregar actividad"/>
                                 <connections>
-                                    <segue destination="mZL-yh-yeC" kind="show" id="o0y-ul-bx6"/>
+                                    <segue destination="mZL-yh-yeC" kind="show" id="bb9-zm-eyl"/>
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4M-XH-0vt">
@@ -531,7 +531,7 @@
             </objects>
             <point key="canvasLocation" x="2224" y="-657"/>
         </scene>
-        <!--Emergencias View Controller-->
+        <!--Contactos-->
         <scene sceneID="F3j-Ou-ymM">
             <objects>
                 <viewController storyboardIdentifier="Emergencias" id="Phr-yY-prm" customClass="EmergenciasViewController" customModule="SaludIntegral" customModuleProvider="target" sceneMemberID="viewController">
@@ -785,7 +785,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tmj-wH-dpo"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="2gD-NR-MZh">
+                    <navigationItem key="navigationItem" title="Contactos" largeTitleDisplayMode="always" id="2gD-NR-MZh">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="aZx-bu-ML3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pID-59-lhO">
                                 <rect key="frame" x="254" y="4.5" width="50" height="35"/>
@@ -927,9 +927,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="aXP-yZ-Gje"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="oliwis" id="VLE-ox-ssw"/>
-                    </toolbarItems>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6IO-Jd-Rao"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tfNombreEmergencia" destination="5Ea-ii-ELp" id="sYm-W4-pv3"/>
@@ -1058,7 +1057,7 @@
                     <navigationItem key="navigationItem" title="Actividades" id="tcw-Ox-hnV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Luf-SV-9gz">
                             <connections>
-                                <segue destination="mZL-yh-yeC" kind="show" id="Z4T-ty-7xj"/>
+                                <segue destination="mZL-yh-yeC" kind="show" id="OZV-Yn-tdn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1375,7 +1374,7 @@
         <image name="whiteHome" width="1065" height="1065"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z4T-ty-7xj"/>
+        <segue reference="OZV-Yn-tdn"/>
         <segue reference="wiQ-cW-tcy"/>
     </inferredMetricsTieBreakers>
 </document>

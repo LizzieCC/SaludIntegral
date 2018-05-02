@@ -22,7 +22,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
     
     @IBOutlet weak var tablaSemana: UITableView!
     
-    
+    var loGuardo = false
     var nuevaActividad: Actividad!
     
     var arrayFrecuencias = ["Una vez", "Semanal"]
@@ -65,6 +65,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
     }
     
     @IBAction func agregarActividad(_ sender: UIButton) {
+        loGuardo = true
         let tipoFrecuencia = Int32(arrayFrecuencias.index(of: frecuenciaSeleccionada)!)
         if let nombre = tfNombre.text, !nombre.isEmpty && (tipoFrecuencia != TipoFrecuencia.Semanal.rawValue || (tipoFrecuencia == TipoFrecuencia.Semanal.rawValue && diasSeleccionados.index(of: true) != nil)) {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -102,6 +103,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loGuardo = false
         let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
         view.addGestureRecognizer(tap)
         scrollView.contentSize = contentView.frame.size
@@ -161,6 +163,20 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
-    
 
+
+   override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        print("View will disappear")
+    
+        if !loGuardo {
+            context.delete(nuevaActividad)
+            do {
+                try context.save()
+            } catch _ {
+            }
+        }
+    }
+ 
 }
