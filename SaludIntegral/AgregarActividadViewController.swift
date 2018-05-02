@@ -52,7 +52,9 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.none
         }
+        //tablaSemana.reloadData()
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -62,6 +64,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         } else {
             tablaSemana.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
         }
+        tablaSemana.reloadData()
     }
     
     @IBAction func agregarActividad(_ sender: UIButton) {
@@ -72,7 +75,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
             nuevaActividad.titulo = nombre
             
             nuevaActividad.alarma = horaAlarma.date as NSDate
-            nuevaActividad.tipoFrecuencia = Int32(arrayFrecuencias.index(of: frecuenciaSeleccionada)!)
+            nuevaActividad.tipoFrecuencia = tipoFrecuencia
             if(nuevaActividad.tipoFrecuencia == TipoFrecuencia.Uno.rawValue) {
                 nuevaActividad.fechaProgramada = pickerFechaUnica.date as NSDate
             } else if(nuevaActividad.tipoFrecuencia == TipoFrecuencia.Semanal.rawValue) {

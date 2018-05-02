@@ -15,7 +15,7 @@ class ProgresoActividadTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        progressView.transform = progressView.transform.scaledBy(x: 1, y: 20)
+        //progressView.transform = progressView.transform.scaledBy(x: 1, y: 20)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
