@@ -44,14 +44,13 @@ class VerHistorialTableViewController: UITableViewController {
     func obtenerActividades() {
         do {
             let date = Date()
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let fetchActividad = NSFetchRequest<NSFetchRequestResult>(entityName: "Actividad")
             fetchActividad.predicate = NSPredicate(format: "area==\(Int32(area.rawValue)) && tipoFrecuencia==\(TipoFrecuencia.Semanal.rawValue)")
-            let actividadesDeArea = try context.fetch(fetchActividad) as! [Actividad]
+            let actividadesDeArea = try AppDelegate.context.fetch(fetchActividad) as! [Actividad]
             for actividadArea in actividadesDeArea {
                 let fetchActividadDia = NSFetchRequest<NSFetchRequestResult>(entityName: "ActividadDia")
                 fetchActividadDia.predicate = NSPredicate(format: "actividad.titulo == %@", actividadArea.titulo)
-                let actividadesDia = try context.fetch(fetchActividadDia) as! [ActividadDia]
+                let actividadesDia = try AppDelegate.context.fetch(fetchActividadDia) as! [ActividadDia]
                 var contador: Float = 0
                 var suma: Float = 0
                 for actividadDia in actividadesDia {

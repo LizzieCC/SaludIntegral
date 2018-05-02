@@ -52,14 +52,13 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
             components.day! += 1
             let dateTo = calendar.date(from: components)!
             
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let fetchActividadDia = NSFetchRequest<NSFetchRequestResult>(entityName: "ActividadDia")
             fetchActividadDia.predicate = NSPredicate(format: "(%@ <= fecha) AND (fecha < %@) AND actividad == %@ AND reprogramado == false", argumentArray: [dateFrom, dateTo, actividad])
-            let actividadDia = try context.fetch(fetchActividadDia) as! [ActividadDia]
+            let actividadDia = try AppDelegate.context.fetch(fetchActividadDia) as! [ActividadDia]
             if actividadDia.count > 0 {
                 actividadesRealizadas.append(actividadDia[0])
             } else {
-                let nuevo = NSEntityDescription.insertNewObject(forEntityName: "ActividadDia", into: context) as! ActividadDia
+                let nuevo = NSEntityDescription.insertNewObject(forEntityName: "ActividadDia", into: AppDelegate.context) as! ActividadDia
                 nuevo.fecha = diaSeleccionado as NSDate
                 nuevo.actividad = actividad
                 actividadesRealizadas.append(nuevo)
@@ -73,11 +72,10 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         actividadesHoy.removeAll()
         actividadesRealizadas.removeAll()
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchActividades = NSFetchRequest<NSFetchRequestResult>(entityName: "Actividad")
         fetchActividades.predicate = NSPredicate(format: "tipoFrecuencia == \(TipoFrecuencia.Semanal.rawValue)")
         do {
-            let actividades = try context.fetch(fetchActividades) as! [Actividad]
+            let actividades = try AppDelegate.context.fetch(fetchActividades) as! [Actividad]
             for actividad in actividades {
                 if(actividad.frecuenciaSemana!  [diaSeleccionado.dayNumberOfWeek()-1]) {
                     actividadesHoy.append(actividad)
@@ -109,7 +107,7 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         let dateTo = calendar.date(from: components)!
         fetchActividades.predicate = NSPredicate(format: "tipoFrecuencia == \(TipoFrecuencia.Uno.rawValue) AND (%@ <= fechaProgramada) AND (fechaProgramada < %@)", argumentArray: [dateFrom, dateTo])
         do {
-            let actividades = try context.fetch(fetchActividades) as! [Actividad]
+            let actividades = try AppDelegate.context.fetch(fetchActividades) as! [Actividad]
             for actividad in actividades {
                 actividadesHoy.append(actividad)
                 obtenerActividadDia(actividad: actividad)
@@ -170,9 +168,8 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         actividadesRealizadas[indexPath.row].realizado = !actividadesRealizadas[indexPath.row].realizado
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
-            try context.save()
+            try AppDelegate.context.save()
             tablaActividades.reloadData()
         } catch let error as NSError {
             print("El contacto no fue guardado")

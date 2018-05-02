@@ -44,9 +44,8 @@ class EmergenciasViewController: UIViewController {
     }
     
     func obtenerDatosEmergencias() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
-            let contactos = try context.fetch(Contacto.fetchRequest()) as [Contacto]
+            let contactos = try AppDelegate.context.fetch(Contacto.fetchRequest()) as [Contacto]
             for contacto in contactos {
                 if contacto.tipo == TipoContacto.Familiar.rawValue {
                     lbNombreFamiliar.text = contacto.nombre
@@ -68,8 +67,7 @@ class EmergenciasViewController: UIViewController {
     
     @IBAction func llamarFamiliar(_ sender: UIButton) {
         //let url: NSURL = URL(string:telFamilia)! as NSURL
-        if let url = URL(string:"TEL://\(telFamilia)") {
-            print(telFamilia)
+        if let url = URL(string:"TEL://\(telFamilia!)") {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
         else{
@@ -82,8 +80,7 @@ class EmergenciasViewController: UIViewController {
     }
     
     @IBAction func llamarMedico(_ sender: UIButton) {
-        if let url = URL(string:"TEL://\(telMedico)") {
-            print(telMedico)
+        if let url = URL(string:"TEL://\(telMedico!)") {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
         else{
@@ -97,8 +94,7 @@ class EmergenciasViewController: UIViewController {
     
     
     @IBAction func llamarEmergencia(_ sender: UIButton) {
-        if let url = URL(string:"TEL://\(telEmergencia)") {
-            print(telEmergencia)
+        if let url = URL(string:"TEL://\(telEmergencia!)") {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         } else {
             //No hay telefono

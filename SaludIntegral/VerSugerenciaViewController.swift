@@ -46,9 +46,7 @@ class VerSugerenciaViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vista = segue.destination as! AgregarActividadViewController
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let actividad = NSEntityDescription.insertNewObject(forEntityName: "Actividad", into: context) as! Actividad
+        let actividad = NSEntityDescription.insertNewObject(forEntityName: "Actividad", into: AppDelegate.context) as! Actividad
         actividad.titulo = sugerencia.titulo!
         actividad.tipoFrecuencia = sugerencia.tipoFrecuencia
         actividad.frecuenciaSemana = sugerencia.frecuenciaSemana

@@ -33,26 +33,25 @@ class EditarContactosViewController: UIViewController {
     }
     
     func getData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contacto")
             
             request.predicate = NSPredicate(format: "tipo == \(TipoContacto.Familiar.rawValue)")
-            let contactoFamiliar = try context.fetch(request) as!  [Contacto]
+            let contactoFamiliar = try AppDelegate.context.fetch(request) as!  [Contacto]
             if contactoFamiliar.count > 0 {
                 tfNombreFamilia.text = contactoFamiliar[0].nombre
                 tfTelFamilia.text = contactoFamiliar[0].telefono
             }
             
             request.predicate = NSPredicate(format: "tipo == \(TipoContacto.Medico.rawValue)")
-            let contactoMedico = try context.fetch(request) as! [Contacto]
+            let contactoMedico = try AppDelegate.context.fetch(request) as! [Contacto]
             if contactoMedico.count > 0 {
                 tfNombreMedico.text = contactoMedico[0].nombre
                 tfTelMedico.text = contactoMedico[0].telefono
             }
             
             request.predicate = NSPredicate(format: "tipo == \(TipoContacto.Emergencias.rawValue)")
-            let contactoEmergencias = try context.fetch(request) as! [Contacto]
+            let contactoEmergencias = try AppDelegate.context.fetch(request) as! [Contacto]
             if contactoEmergencias.count > 0 {
                 tfNombreEmergencia.text = contactoEmergencias[0].nombre
                 tfTelEmergencia.text = contactoEmergencias[0].telefono
@@ -68,31 +67,29 @@ class EditarContactosViewController: UIViewController {
     }
     
     func guardar(tipo: TipoContacto, nombre: String, telefono: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contacto")
         request.predicate = NSPredicate(format: "tipo == \(tipo.rawValue)")
         
         do{
-            let results = try context.fetch(request)
+            let results = try AppDelegate.context.fetch(request)
             if results.count > 0 {
                 let contacto = results[0] as! NSManagedObject
                 contacto.setValue(nombre, forKey: "nombre")
                 contacto.setValue(telefono, forKey: "telefono")
                 contacto.setValue(tipo.rawValue, forKey: "tipo")
                 do {
-                    try context.save()
+                    try AppDelegate.context.save()
                 } catch let error as NSError {
                     print("El contacto no fue guardado")
                     print("Error \(error) \(error.userInfo)")
                 }
             } else {
-                let contacto = NSEntityDescription.insertNewObject(forEntityName: "Contacto", into: context) as! Contacto
+                let contacto = NSEntityDescription.insertNewObject(forEntityName: "Contacto", into: AppDelegate.context) as! Contacto
                 contacto.tipo = Int32(tipo.rawValue)
                 contacto.setValue(nombre, forKey: "nombre")
                 contacto.setValue(telefono, forKey: "telefono")
                 do {
-                    try context.save()
+                    try AppDelegate.context.save()
                 } catch let error as NSError {
                     print("El contacto no fue guardado")
                     print("Error \(error) \(error.userInfo)")

@@ -46,8 +46,7 @@ class ReprogramarActividadViewController: UIViewController {
     */
     
     @IBAction func reprogramarActividad(_ sender: UIButton) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let nuevaActividadDia = NSEntityDescription.insertNewObject(forEntityName: "ActividadDia", into: context) as! ActividadDia
+        let nuevaActividadDia = NSEntityDescription.insertNewObject(forEntityName: "ActividadDia", into: AppDelegate.context) as! ActividadDia
         nuevaActividadDia.fecha = pickerFecha.date as NSDate
         nuevaActividadDia.hora = pickerHora.date as NSDate
         nuevaActividadDia.actividad = actividadAReprogramar.actividad
@@ -56,7 +55,7 @@ class ReprogramarActividadViewController: UIViewController {
         print(nuevaActividadDia)
         
         do {
-            try context.save()
+            try AppDelegate.context.save()
             navigationController?.popViewController(animated: true)
         } catch let error as NSError {
             print("La actividad no fue guardado")

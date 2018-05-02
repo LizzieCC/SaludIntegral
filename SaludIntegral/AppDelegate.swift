@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
     
     var notificaciones: [Actividad] = []
+    
+    static var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -44,8 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UNUserNotificationCenter.current().setNotificationCategories([reprogramarCategory])
         UNUserNotificationCenter.current().delegate = self
         
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         var calendar = Calendar.current
         calendar.timeZone = NSTimeZone.local
         let dateFrom = calendar.startOfDay(for: Date())
@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let fetchActividades = NSFetchRequest<NSFetchRequestResult>(entityName: "Actividad")
        fetchActividades.predicate = NSPredicate(format: "tipoFrecuencia == \(TipoFrecuencia.Uno.rawValue) AND (%@ <= fechaProgramada) AND (fechaProgramada < %@)", argumentArray: [dateFrom, dateTo])
         do {
-            let actividades = try context.fetch(fetchActividades) as! [Actividad]
+            let actividades = try AppDelegate.context.fetch(fetchActividades) as! [Actividad]
             for actividad in actividades {
                 agregarNotificacion(actividad: actividad)
             }
@@ -162,10 +162,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     // MARK: - Core Data Saving support
     
     func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
+        if AppDelegate.context.hasChanges {
             do {
-                try context.save()
+                try AppDelegate.context.save()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
