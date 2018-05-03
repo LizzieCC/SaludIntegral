@@ -14,8 +14,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         //
     }
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
+
     @IBOutlet weak var pickerFechaUnica: UIDatePicker!
     @IBOutlet weak var tfNombre: UITextField!
     @IBOutlet weak var tipoActividad: UISegmentedControl!
@@ -43,7 +42,6 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
         view.addGestureRecognizer(tap)
-        scrollView.contentSize = contentView.frame.size
         pickerFrecuencia.delegate = self
         pickerFrecuencia.dataSource = self
         
