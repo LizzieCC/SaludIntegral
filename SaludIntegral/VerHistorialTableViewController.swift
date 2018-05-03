@@ -10,13 +10,17 @@ import UIKit
 import CoreData
 
 class ProgresoActividad {
-    init(titulo: String, porcentaje: Float) {
+    init(titulo: String, porcentaje: Float, hechos: Int, todos: Int) {
         self.titulo = titulo
         self.porcentaje = porcentaje
+        self.hechos = hechos
+        self.todos = todos
     }
     
     var titulo: String!
     var porcentaje: Float!
+    var todos: Int!
+    var hechos: Int!
 }
 
 class VerHistorialTableViewController: UITableViewController {
@@ -61,7 +65,7 @@ class VerHistorialTableViewController: UITableViewController {
                 }
                 if contador > 0 {
                     let porcentaje = suma/contador
-                    actividades.append(ProgresoActividad(titulo: actividadArea.titulo, porcentaje: porcentaje))
+                    actividades.append(ProgresoActividad(titulo: actividadArea.titulo, porcentaje: porcentaje, hechos: Int(suma), todos: Int(contador)))
                 }
             }
         } catch {
@@ -85,8 +89,9 @@ class VerHistorialTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProgresoActividadTableViewCell
         cell.progressView.progress = actividades[indexPath.row].porcentaje
         //cell.lbActividad.text = actividades[indexPath.row].titulo
-        let roundPercentage = (actividades[indexPath.row].porcentaje!*100).rounded()
-        cell.lbActividad.text = actividades[indexPath.row].titulo + "\t \(roundPercentage)%"
+        //let roundPercentage = (actividades[indexPath.row].porcentaje!*100).rounded()
+        let roundPercentage = "\(actividades[indexPath.row].hechos!) de \(actividades[indexPath.row].todos!)"
+        cell.lbActividad.text = actividades[indexPath.row].titulo + "\t \(roundPercentage) actividades realizadas"
         return cell
     }
     

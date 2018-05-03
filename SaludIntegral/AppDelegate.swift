@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         let reprogramarAction = UNNotificationAction(
             identifier: "reprogramar.action",
-            title: "Reprogramar",
+            title: "Ver Agenda",
             options: [.foreground])
         let okAction = UNNotificationAction(
             identifier: "ok.action",
@@ -99,9 +99,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.actionIdentifier == "reprogramar.action" {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Home")
-            window?.rootViewController = vc
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //let vc = storyboard.instantiateViewController(withIdentifier: "Home")
+            //let vcAgenda = storyboard.instantiateViewController(withIdentifier: "Agenda")
+            //vc.navigationController?.pushViewController(vcAgenda, animated: true)
+            var navigationController: UINavigationController? = (self.window?.rootViewController as? UINavigationController)
+            
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            navigationController?.popToRootViewController(animated: false)
+            navigationController?.pushViewController(storyboard.instantiateViewController(withIdentifier: "Agenda"), animated: false)
         } else if response.actionIdentifier == "ok.action" {
             
         }

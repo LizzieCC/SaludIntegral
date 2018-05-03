@@ -53,8 +53,9 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
             let dateTo = calendar.date(from: components)!
             
             let fetchActividadDia = NSFetchRequest<NSFetchRequestResult>(entityName: "ActividadDia")
-            fetchActividadDia.predicate = NSPredicate(format: "(%@ <= fecha) AND (fecha < %@) AND actividad == %@ AND reprogramado == false", argumentArray: [dateFrom, dateTo, actividad])
+            fetchActividadDia.predicate = NSPredicate(format: "(%@ <= fecha) AND (fecha < %@) AND actividad.titulo == %@", argumentArray: [dateFrom, dateTo, actividad.titulo])
             let actividadDia = try AppDelegate.context.fetch(fetchActividadDia) as! [ActividadDia]
+            print(actividadDia)
             if actividadDia.count > 0 {
                 actividadesRealizadas.append(actividadDia[0])
             } else {
