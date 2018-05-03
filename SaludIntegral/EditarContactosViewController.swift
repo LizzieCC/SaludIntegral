@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class EditarContactosViewController: UIViewController {
+class EditarContactosViewController: UIViewController, UITextFieldDelegate {
    
     @IBOutlet weak var tfTelEmergencia: UITextField!
     @IBOutlet weak var tfNombreEmergencia: UITextField!
@@ -17,16 +17,50 @@ class EditarContactosViewController: UIViewController {
     @IBOutlet weak var tfNombreMedico: UITextField!
     @IBOutlet weak var tfTelFamilia: UITextField!
     @IBOutlet weak var tfNombreFamilia: UITextField!
-    
+    var activeField : UITextField!
+    var moveKey = true
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
         view.addGestureRecognizer(tap)
+        NotificationCenter.default.addObserver(self, selector: #selector(EditarContactosViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(EditarContactosViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     @IBAction func quitaTeclado() {
         view.endEditing(true)
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 && moveKey{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0 && moveKey{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("did begin")
+        if textField.tag == 1 || textField.tag == 2 {
+            moveKey = false
+            print("no se debe ir")
+        }
+        else{
+            //Nada
+            moveKey = true
+            print("nada")
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         getData()
@@ -114,8 +148,6 @@ class EditarContactosViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    
     
 
     // MARK: - Navigation

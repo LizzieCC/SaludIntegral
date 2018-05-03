@@ -66,42 +66,36 @@ class EmergenciasViewController: UIViewController {
     
     
     @IBAction func llamarFamiliar(_ sender: UIButton) {
-        //let url: NSURL = URL(string:telFamilia)! as NSURL
-        if let url = URL(string:"TEL://\(telFamilia!)") {
-            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-        }
-        else{
+        if telFamilia == nil {
             //No hay telefono
             let alertaA = UIAlertController(title: "No hay contacto guardado", message: ":)", preferredStyle: .alert)
             alertaA.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alertaA, animated: true, completion: nil)
-            
+        } else if let url = URL(string:"TEL://\(telFamilia!)") {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
     }
     
     @IBAction func llamarMedico(_ sender: UIButton) {
-        if let url = URL(string:"TEL://\(telMedico!)") {
-            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-        }
-        else{
+        if telMedico == nil {
             //No hay telefono
             let alertaA = UIAlertController(title: "No hay contacto guardado", message: ":)", preferredStyle: .alert)
             alertaA.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alertaA, animated: true, completion: nil)
-            
+        } else if let url = URL(string:"TEL://\(telMedico!)") {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
     }
     
     
     @IBAction func llamarEmergencia(_ sender: UIButton) {
-        if let url = URL(string:"TEL://\(telEmergencia!)") {
-            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-        } else {
+        if telEmergencia == nil {
             //No hay telefono
             let alertaA = UIAlertController(title: "No hay contacto guardado", message: ":)", preferredStyle: .alert)
             alertaA.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alertaA, animated: true, completion: nil)
-            
+        } else if let url = URL(string:"TEL://\(telEmergencia!)") {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
     }
     
