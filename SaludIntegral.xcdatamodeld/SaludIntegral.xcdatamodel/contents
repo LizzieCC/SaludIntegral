@@ -26,7 +26,7 @@
         <attribute name="area" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="descripcion" attributeType="String" syncable="YES"/>
         <attribute name="frecuenciaSemana" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="imagen" attributeType="String" syncable="YES"/>
+        <attribute name="imagen" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="prioridad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="tipoFrecuencia" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="titulo" attributeType="String" syncable="YES"/>
@@ -36,6 +36,6 @@
         <element name="Actividad" positionX="-2" positionY="-72" width="128" height="163"/>
         <element name="ActividadDia" positionX="-234" positionY="-45" width="128" height="120"/>
         <element name="Contacto" positionX="-9" positionY="101" width="128" height="88"/>
-        <element name="Sugerencia" positionX="261" positionY="-30" width="128" height="163"/>
+        <element name="Sugerencia" positionX="261" positionY="-30" width="128" height="165"/>
     </elements>
 </model>

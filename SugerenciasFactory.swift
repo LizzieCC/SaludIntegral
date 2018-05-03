@@ -55,7 +55,7 @@ class SugerenciasFactory {
         
         let sugerencia4 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia4.area = Int32(Area.Fisico.rawValue)
-        sugerencia4.titulo = "Nada como pez en el agua"
+        sugerencia4.titulo = "Natación"
         sugerencia4.descripcion = "Al entrar en el agua el peso del cuerpo es contrarrestado por la fuerza de flotación y los huesos, articulaciones y músculos se liberan de la compresión y la tensión que poseen. Te recomendamos realizar sencillos movimientos de piernas y brazos parados o en desplazamiento."
         sugerencia4.imagen = "https://image.ibb.co/hJhGBc/nadar.png"
         sugerencia4.prioridad = 1
@@ -72,7 +72,7 @@ class SugerenciasFactory {
         
         let sugerencia6 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia6.area = Int32(Area.Fisico.rawValue)
-        sugerencia6.titulo = "¿Cuentas con una mascota? ¡Paseala al aire libre!"
+        sugerencia6.titulo = "Pasear mascota"
         sugerencia6.descripcion = "Las mascotas sienten un amor incondicional con su dueño. Ejercítate y pasa un agradable tiempo con tu mascota. Preocupate por tu pequeño amigo, sacarlo a pasear, jugar con él o alimentarlo hace que permanezcas activo y con energía. Si tienes un perro corres menos riesgo de contraer un ataque al corazón."
         sugerencia6.imagen = "https://image.ibb.co/jNwyPx/pasearperro.png"
         sugerencia6.prioridad = 1
@@ -80,7 +80,7 @@ class SugerenciasFactory {
         
         let sugerencia7 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia7.area = Int32(Area.Fisico.rawValue)
-        sugerencia7.titulo = "Ejercicios de respiración todos los días por 10 minutos"
+        sugerencia7.titulo = "Ejercicios de respiración diarios por 10 minutos"
         sugerencia7.descripcion = "Realizar ejercicios de respiración colocando las manos, una en el tórax y otra en el abdomen, para observar una respiración diafragmática."
         sugerencia7.imagen = "https://image.ibb.co/nm9k4x/ejerciciosrespiracion.png"
         sugerencia7.prioridad = 1
@@ -185,7 +185,7 @@ class SugerenciasFactory {
         
         let sugerencia19 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia19.area = Int32(Area.Mental.rawValue)
-        sugerencia19.titulo = "Hora de una partida de damas chinas"
+        sugerencia19.titulo = "Damas chinas"
         sugerencia19.descripcion = "Busca a algún familiar y juega una partida de damas chinas. Si no sabes las reglas del juego te dejamos este vídeo en donde puedes aprender el reglamente del juego. "
         sugerencia19.video = "https://www.youtube.com/watch?v=1s8VCq2Z5NE"
         sugerencia19.imagen = "https://image.ibb.co/gYRF4x/damaschinas.png"
