@@ -152,8 +152,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mUv-KV-dej">
-                                <rect key="frame" x="44.5" y="76" width="231" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUv-KV-dej">
+                                <rect key="frame" x="20" y="76" width="280" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="Fwf-0Q-9j1">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -163,22 +163,24 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salud Integral" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhM-89-drq">
-                                        <rect key="frame" x="55" y="0.0" width="176" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="27"/>
+                                        <rect key="frame" x="50" y="0.0" width="230" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="48"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                        </variation>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mUv-KV-dej" secondAttribute="height" multiplier="231:50" id="niN-Rm-Txy"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mUv-KV-dej" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="KbH-00-cOq"/>
                             <constraint firstItem="mUv-KV-dej" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LTU-k7-aPS"/>
+                            <constraint firstItem="mUv-KV-dej" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QPD-He-YRO"/>
                             <constraint firstItem="zaS-tw-hs7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="cOa-fd-OYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mUv-KV-dej" secondAttribute="trailing" constant="20" id="dyk-cN-ZdZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zaS-tw-hs7" secondAttribute="trailing" constant="15" id="fEM-hG-JUI"/>
                             <constraint firstItem="zaS-tw-hs7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="gnr-Ua-u5D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zaS-tw-hs7" secondAttribute="bottom" constant="15" id="sMb-7c-Tds"/>
@@ -342,9 +344,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Historial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwg-in-pAQ">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="32.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="54"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -422,9 +427,12 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZE-Xw-u4n">
                                                     <rect key="frame" x="170" y="11" width="135" height="151"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                     <color key="textColor" red="1" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
