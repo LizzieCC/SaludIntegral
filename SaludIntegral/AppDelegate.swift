@@ -77,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if (esSemanalHoy || esProgramadoHoy) {
                 let content = UNMutableNotificationContent()
                 content.title = actividad.titulo
-                content.body = "Desliza para reprogramar o quitar notificación"
+                content.body = "Desliza para ir a agenda o quitar notificación"
                 content.categoryIdentifier = "reprogramar.category"
                 content.badge = 1
                 let hour = Calendar.current.component(.hour, from: alarma)
