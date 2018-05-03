@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CXR-GR-EPH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CXR-GR-EPH">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -38,7 +38,7 @@
                                                                 <rect key="contentStretch" x="0.050000000000000003" y="0.050000000000000003" width="1" height="1"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" red="0.48047550647987602" green="0.48047550647987602" blue="0.48047550647987602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Sugerencias" image="1VIDAYSALUD">
+                                                                <state key="normal" title="Sugerencias" image="VIDAYSALUD">
                                                                     <color key="titleColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -185,7 +185,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="NYP-jG-XMV"/>
+                    <navigationItem key="navigationItem" title="Menú" largeTitleDisplayMode="always" id="NYP-jG-XMV"/>
                     <connections>
                         <outlet property="btActividades" destination="T2y-it-PYI" id="M52-BW-FOo"/>
                         <outlet property="btEmergencias" destination="0Cx-NI-Mpu" id="rdz-9W-Dfi"/>
@@ -377,7 +377,7 @@
             </objects>
             <point key="canvasLocation" x="1110" y="282"/>
         </scene>
-        <!--Sugerencias-->
+        <!--Vida y Salud-->
         <scene sceneID="nfJ-Ji-zAv">
             <objects>
                 <viewController storyboardIdentifier="Sugerencias" id="icK-Jd-nNu" customClass="SugerenciasViewController" customModule="SaludIntegral" customModuleProvider="target" sceneMemberID="viewController">
@@ -393,7 +393,7 @@
                                         <color key="badgeColor" red="1" green="0.57254901960000004" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tabBarItem>
                                     <tabBarItem title="Financiero" image="money" id="cLi-Na-uYA"/>
-                                    <tabBarItem title="Espiritual" image="bible" id="8lc-dH-JK3"/>
+                                    <tabBarItem title="Personal" image="honesto" id="8lc-dH-JK3"/>
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tabBar>
@@ -460,7 +460,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JXl-Np-3bi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sugerencias" id="NJc-5U-3dR"/>
+                    <navigationItem key="navigationItem" title="Vida y Salud" id="NJc-5U-3dR"/>
                     <connections>
                         <outlet property="tabBarAreas" destination="Tgy-6i-w6y" id="0Q0-7c-gz4"/>
                         <outlet property="tablaSugerencias" destination="L6Y-fw-emr" id="m9b-Xf-p0R"/>
@@ -1035,7 +1035,7 @@
             </objects>
             <point key="canvasLocation" x="2379.375" y="280.98591549295776"/>
         </scene>
-        <!--Actividades-->
+        <!--Agenda-->
         <scene sceneID="lFB-mr-m8g">
             <objects>
                 <viewController storyboardIdentifier="Actividades" id="HY8-dM-XZH" customClass="ActividadesDiaViewController" customModule="SaludIntegral" customModuleProvider="target" sceneMemberID="viewController">
@@ -1116,7 +1116,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JPb-9Z-k8y"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Actividades" id="tcw-Ox-hnV">
+                    <navigationItem key="navigationItem" title="Agenda" id="tcw-Ox-hnV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Luf-SV-9gz">
                             <connections>
                                 <segue destination="mZL-yh-yeC" kind="show" id="OZV-Yn-tdn"/>
@@ -1332,15 +1332,31 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="468"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IYp-oo-gII">
+                                                <rect key="frame" x="66" y="0.0" width="192" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Reprogramar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3n-ZK-yQh" userLabel="Reprogramar">
+                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ECp-iu-hcP">
+                                                        <rect key="frame" x="0.0" y="36" width="192" height="36"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Actividad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-an-JPK" userLabel="Reprogramar">
+                                                                <rect key="frame" x="0.0" y="0.0" width="192" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de la actividad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-It-6fq">
                                                 <rect key="frame" x="31" y="76" width="182" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reprogramar Actividad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-an-JPK">
-                                                <rect key="frame" x="72" y="29" width="176" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1360,13 +1376,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0h-ht-pSS">
-                                                <rect key="frame" x="28" y="134" width="52" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="klg-VY-ZVW">
                                                 <rect key="frame" x="27" y="150" width="266" height="130"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -1375,13 +1384,6 @@
                                                 </date>
                                                 <locale key="locale" localeIdentifier="es_419"/>
                                             </datePicker>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-75-Uyv">
-                                                <rect key="frame" x="54" y="105" width="62" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpw-jV-dur">
                                                 <rect key="frame" x="115" y="405" width="90" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1397,6 +1399,13 @@
                                                     <!--2018-04-01 23:01:20 +0000-->
                                                 </date>
                                             </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-75-Uyv">
+                                                <rect key="frame" x="31" y="105" width="62" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.59928385419999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -1416,20 +1425,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRf-t6-RzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3296" y="-667"/>
+            <point key="canvasLocation" x="3294.375" y="-667.6056338028169"/>
         </scene>
     </scenes>
     <resources>
         <image name="1AGENDA" width="766" height="1025"/>
         <image name="1HISTORIAL" width="904" height="1035"/>
-        <image name="1VIDAYSALUD" width="1156" height="1062"/>
-        <image name="bible" width="24" height="24"/>
+        <image name="VIDAYSALUD" width="1004" height="1225"/>
         <image name="brain" width="25" height="25"/>
         <image name="doctor-1" width="128" height="128"/>
         <image name="emergencias_blanco_bueno" width="1191" height="1133"/>
         <image name="emergencyContact" width="128" height="128"/>
         <image name="flower" width="304" height="273"/>
         <image name="food" width="25" height="25"/>
+        <image name="honesto" width="30" height="30"/>
         <image name="money" width="26" height="26"/>
         <image name="whiteHome" width="1065" height="1065"/>
     </resources>
