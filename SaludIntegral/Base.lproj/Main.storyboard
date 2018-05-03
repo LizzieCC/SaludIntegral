@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CXR-GR-EPH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CXR-GR-EPH">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -63,7 +63,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2y-it-PYI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="142.5" height="189.5"/>
-                                                                <color key="backgroundColor" red="0.57647058819999997" green="0.30588235289999999" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="0.68148117688985277" green="0.55922090315161077" blue="0.82660242779000759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Actividades" image="1AGENDA">
@@ -219,11 +219,11 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxa-Vp-NHt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="142.5" height="189.5"/>
-                                                                <color key="backgroundColor" red="0.98039215690000003" green="1" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" red="0.33664246869143127" green="0.46583828462772858" blue="0.79144125329661486" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <rect key="contentStretch" x="0.050000000000000003" y="0.050000000000000003" width="1" height="1"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Físico">
+                                                                <state key="normal" title="Físico" image="VS_FISICO">
                                                                     <color key="titleColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -248,10 +248,10 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djZ-UE-hMz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="142.5" height="189.5"/>
-                                                                <color key="backgroundColor" red="0.70980392160000005" green="1" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" red="0.60511376049301768" green="0.7781110496690431" blue="0.38838299965696366" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Mental">
+                                                                <state key="normal" title="Mental" image="VS_MENTAL">
                                                                     <color key="titleColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -282,11 +282,11 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="IA2-Xd-gVZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="142.5" height="189"/>
-                                                                <color key="backgroundColor" red="1" green="0.57254901960000004" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="0.95523637533187866" green="0.67451514159918691" blue="0.25150698856936454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="30"/>
                                                                 <color key="tintColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                                                                <state key="normal" title="Finanzas">
+                                                                <state key="normal" title="Finanzas" image="VS_FINANCIERO">
                                                                     <color key="titleColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -312,10 +312,10 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E2-gG-NJ7">
                                                                 <rect key="frame" x="0.0" y="0.0" width="142.5" height="189.5"/>
-                                                                <color key="backgroundColor" red="0.58039215690000001" green="0.96470588239999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="0.61196262207662" green="0.8322691660242032" blue="0.8322691660242032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Espiritual">
+                                                                <state key="normal" title="Espiritual" image="VS_PERSONAL">
                                                                     <color key="titleColor" red="0.48047550649999998" green="0.48047550649999998" blue="0.48047550649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -1079,8 +1079,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUr-V5-u1g">
-                                        <rect key="frame" x="48" y="14" width="224" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="48" y="13.5" width="224" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1441,6 +1441,10 @@
         <image name="1AGENDA" width="766" height="1025"/>
         <image name="1HISTORIAL" width="904" height="1035"/>
         <image name="VIDAYSALUD" width="1004" height="1225"/>
+        <image name="VS_FINANCIERO" width="1014" height="995"/>
+        <image name="VS_FISICO" width="870" height="1133"/>
+        <image name="VS_MENTAL" width="766" height="1072"/>
+        <image name="VS_PERSONAL" width="974" height="1193"/>
         <image name="brain" width="25" height="25"/>
         <image name="doctor-1" width="128" height="128"/>
         <image name="emergencias_blanco_bueno" width="1191" height="1133"/>
@@ -1452,7 +1456,7 @@
         <image name="whiteHome" width="1065" height="1065"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bb9-zm-eyl"/>
+        <segue reference="OZV-Yn-tdn"/>
         <segue reference="wiQ-cW-tcy"/>
     </inferredMetricsTieBreakers>
 </document>
