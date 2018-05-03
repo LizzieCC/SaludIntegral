@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A07EE96209B6A9500DF7CBE /* DiasSemanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07EE95209B6A9500DF7CBE /* DiasSemanaViewController.swift */; };
 		6A0ABE872072D20600C5B781 /* Contacto2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0ABE862072D20600C5B781 /* Contacto2.swift */; };
 		6A0ABE8B2072E64600C5B781 /* Sugerencia2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0ABE8A2072E64600C5B781 /* Sugerencia2.swift */; };
 		6A3971C320796AB800868647 /* Contacto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3971BB20796AB800868647 /* Contacto+CoreDataClass.swift */; };
@@ -22,7 +23,6 @@
 		6A464E01205A14F7007C0BD6 /* SugerenciasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A464E00205A14F7007C0BD6 /* SugerenciasTableViewCell.swift */; };
 		6A4F5D99208D6E2600E7AC6E /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F5D98208D6E2600E7AC6E /* HistorialViewController.swift */; };
 		6A4F5D9B208D70F600E7AC6E /* VerHistorialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F5D9A208D70F600E7AC6E /* VerHistorialTableViewController.swift */; };
-		6A57BE00209A8F34000A26B1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A57BDFF209A8F34000A26B1 /* TableViewController.swift */; };
 		6A75FB6B207AB47300A1EC3D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A75FB6A207AB47300A1EC3D /* MainViewController.swift */; };
 		6A75FB6D207AC62700A1EC3D /* VerSugerenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A75FB6C207AC62600A1EC3D /* VerSugerenciaViewController.swift */; };
 		6A8F26C2205A82880095730F /* SaludIntegral.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F26C0205A82880095730F /* SaludIntegral.xcdatamodeld */; };
@@ -63,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A07EE95209B6A9500DF7CBE /* DiasSemanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiasSemanaViewController.swift; sourceTree = "<group>"; };
 		6A0ABE862072D20600C5B781 /* Contacto2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacto2.swift; sourceTree = "<group>"; };
 		6A0ABE8A2072E64600C5B781 /* Sugerencia2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sugerencia2.swift; sourceTree = "<group>"; };
 		6A3971BB20796AB800868647 /* Contacto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contacto+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		6A464E00205A14F7007C0BD6 /* SugerenciasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugerenciasTableViewCell.swift; sourceTree = "<group>"; };
 		6A4F5D98208D6E2600E7AC6E /* HistorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		6A4F5D9A208D70F600E7AC6E /* VerHistorialTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerHistorialTableViewController.swift; sourceTree = "<group>"; };
-		6A57BDFF209A8F34000A26B1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6A75FB6A207AB47300A1EC3D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6A75FB6C207AC62600A1EC3D /* VerSugerenciaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerSugerenciaViewController.swift; sourceTree = "<group>"; };
 		6A8F26C1205A82880095730F /* SaludIntegral.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaludIntegral.xcdatamodel; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 		FBED2F5620505B74005240E2 = {
 			isa = PBXGroup;
 			children = (
+				6A07EE95209B6A9500DF7CBE /* DiasSemanaViewController.swift */,
 				C6C9D861209A37B5004142EB /* SugerenciasFactory.swift */,
 				6A3971BB20796AB800868647 /* Contacto+CoreDataClass.swift */,
 				6A3971BC20796AB800868647 /* Contacto+CoreDataProperties.swift */,
@@ -176,7 +177,6 @@
 				6A4625C02072B9E100556F8C /* GoogleService-Info.plist */,
 				FBED2F6220505B74005240E2 /* AppDelegate.swift */,
 				FBED2F6620505B74005240E2 /* Main.storyboard */,
-				6A57BDFF209A8F34000A26B1 /* TableViewController.swift */,
 				6AFFD7BC20900BE300A59612 /* ReprogramarActividadViewController.swift */,
 				6AAB1CE4208FEF100057D8A3 /* ProgresoActividadTableViewCell.swift */,
 				6A4F5D9A208D70F600E7AC6E /* VerHistorialTableViewController.swift */,
@@ -465,7 +465,7 @@
 				FB6EC6D52050638100F1B3A2 /* EmergenciasViewController.swift in Sources */,
 				6A8F26C2205A82880095730F /* SaludIntegral.xcdatamodeld in Sources */,
 				6A3971C520796AB800868647 /* Actividad+CoreDataClass.swift in Sources */,
-				6A57BE00209A8F34000A26B1 /* TableViewController.swift in Sources */,
+				6A07EE96209B6A9500DF7CBE /* DiasSemanaViewController.swift in Sources */,
 				C6C9D862209A37B5004142EB /* SugerenciasFactory.swift in Sources */,
 				6AAD69A32054C6FF00A39217 /* FrecuenciaMes.swift in Sources */,
 				6A3971C820796AB800868647 /* Sugerencia+CoreDataProperties.swift in Sources */,

@@ -9,11 +9,10 @@
 import UIKit
 import CoreData
 
-class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, protocoloDiasSemana{
+class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     func ponerDias(diasSeleccionados: [Bool]) {
         //
     }
-    
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
@@ -22,9 +21,9 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var tipoActividad: UISegmentedControl!
     @IBOutlet weak var horaAlarma: UIDatePicker!
     @IBOutlet weak var elegirDias: UIButton!
-    
+    var goWeek = false
     //@IBOutlet weak var weekTable: UITableView!
-    
+    var recibeSemana = [Bool]()
     var loGuardo = false
     var nuevaActividad: Actividad!
     var arrayFrecuencias = ["Una vez", "Semanal"]
@@ -41,6 +40,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         loGuardo = false
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
         view.addGestureRecognizer(tap)
         scrollView.contentSize = contentView.frame.size
@@ -52,6 +52,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         if(nuevaActividad == nil) {
             nuevaActividad = NSEntityDescription.insertNewObject(forEntityName: "Actividad", into: context) as! Actividad
         }
+        
         tfNombre.text = nuevaActividad.titulo
         frecuenciaSeleccionada = arrayFrecuencias[Int(nuevaActividad.tipoFrecuencia)]
         pickerFrecuencia.selectRow(Int(nuevaActividad.tipoFrecuencia), inComponent: 0, animated: true)
@@ -92,6 +93,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         
     }*/
     //Picker
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -128,6 +130,8 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
     
     @IBAction func agregarActividad(_ sender: UIButton) {
         loGuardo = true
+        print("unwind")
+        dump(diasSeleccionados)
         let tipoFrecuencia = Int32(arrayFrecuencias.index(of: frecuenciaSeleccionada)!)
         if let nombre = tfNombre.text, !nombre.isEmpty && (tipoFrecuencia != TipoFrecuencia.Semanal.rawValue || (tipoFrecuencia == TipoFrecuencia.Semanal.rawValue && diasSeleccionados.index(of: true) != nil)) {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -138,7 +142,13 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
             if(nuevaActividad.tipoFrecuencia == TipoFrecuencia.Uno.rawValue) {
                 nuevaActividad.fechaProgramada = pickerFechaUnica.date as NSDate
             } else if(nuevaActividad.tipoFrecuencia == TipoFrecuencia.Semanal.rawValue) {
+                print("guardar frecuencia")
+                dump(diasSeleccionados)
+                
                 nuevaActividad.frecuenciaSemana = diasSeleccionados
+                
+                print("ver frecuencia")
+                dump(nuevaActividad.frecuenciaSemana)
             }
             nuevaActividad.area = Int32(tipoActividad.selectedSegmentIndex)
             
@@ -159,13 +169,13 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
     }
     
    
-
+ 
    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
          let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         print("View will disappear")
     
-        if !loGuardo {
+        if !loGuardo && !goWeek {
             context.delete(nuevaActividad)
             do {
                 try context.save()
@@ -174,10 +184,16 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
+    @IBAction func unwindDiasSemana(unwindSegue: UIStoryboardSegue){
+        print("unwind")
+        dump(diasSeleccionados)
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        goWeek = true
         if segue.identifier == "tableWeekDays"{
-            let vistaTabla = segue.destination as! TableViewController
-            vistaTabla.semana = diasSeleccionados
+            let vistaTabla = segue.destination as! DiasSemanaViewController
+            vistaTabla.diasSeleccionados = diasSeleccionados
             
         }
     }

@@ -84,8 +84,9 @@ class VerHistorialTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProgresoActividadTableViewCell
         cell.progressView.progress = actividades[indexPath.row].porcentaje
-        cell.lbActividad.text = actividades[indexPath.row].titulo
-        
+        //cell.lbActividad.text = actividades[indexPath.row].titulo
+        let roundPercentage = (actividades[indexPath.row].porcentaje!*100).rounded()
+        cell.lbActividad.text = actividades[indexPath.row].titulo + "\t \(roundPercentage)%"
         return cell
     }
     
