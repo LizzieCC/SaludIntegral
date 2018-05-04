@@ -10,6 +10,7 @@ import UIKit
 
 class ProgresoActividadTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var lbProgreso: UILabel!
     @IBOutlet weak var lbActividad: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     

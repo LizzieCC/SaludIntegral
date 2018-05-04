@@ -150,6 +150,7 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         let cell = tablaActividades.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         let actividad = actividadesHoy [indexPath.row]
         cell.textLabel?.text = actividad.titulo
+        
         setCellAccesory(cell: cell, filled: actividadesRealizadas[indexPath.row].realizado)
         return cell
     }

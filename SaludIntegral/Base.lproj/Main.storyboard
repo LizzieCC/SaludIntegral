@@ -1084,13 +1084,22 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dIT-KQ-3rF">
                                             <rect key="frame" x="16" y="11" width="288" height="90"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-a5-fo3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="55"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-a5-fo3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="29.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6A-bV-Y3c">
+                                                    <rect key="frame" x="0.0" y="39.5" width="43.5" height="15.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                    <color key="textColor" red="0.2942630141" green="0.42235509719999997" blue="0.78315252589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     </variation>
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p2a-mQ-IdY">
@@ -1116,6 +1125,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lbActividad" destination="DgI-a5-fo3" id="3Wj-S7-jge"/>
+                                    <outlet property="lbProgreso" destination="F6A-bV-Y3c" id="qMq-Hl-JZX"/>
                                     <outlet property="progressView" destination="p2a-mQ-IdY" id="YvU-gm-buW"/>
                                 </connections>
                             </tableViewCell>
@@ -1593,7 +1603,7 @@
         <image name="whiteHome" width="1065" height="1065"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bb9-zm-eyl"/>
+        <segue reference="OZV-Yn-tdn"/>
         <segue reference="wiQ-cW-tcy"/>
     </inferredMetricsTieBreakers>
 </document>

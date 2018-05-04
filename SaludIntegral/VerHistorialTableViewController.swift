@@ -91,12 +91,13 @@ class VerHistorialTableViewController: UITableViewController {
         //cell.lbActividad.text = actividades[indexPath.row].titulo
         //let roundPercentage = (actividades[indexPath.row].porcentaje!*100).rounded()
         let roundPercentage = "\(actividades[indexPath.row].hechos!) de \(actividades[indexPath.row].todos!)"
-        cell.lbActividad.text = actividades[indexPath.row].titulo + "\t \(roundPercentage) actividades realizadas"
+        cell.lbActividad.text = actividades[indexPath.row].titulo
+        cell.lbProgreso.text = "\t \(roundPercentage) actividades realizadas"
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 150
     }
 
     /*
