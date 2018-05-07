@@ -1146,47 +1146,33 @@
             </objects>
             <point key="canvasLocation" x="2379.375" y="280.98591549295776"/>
         </scene>
-        <!--Bibliografía-->
+        <!--Créditos imágenes-->
         <scene sceneID="L7d-F0-Dcc">
             <objects>
-                <viewController title="Bibliografía" id="fj1-bg-VS7" sceneMemberID="viewController">
+                <viewController title="Créditos imágenes" id="fj1-bg-VS7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uXe-S4-GL8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hSj-Ri-kDP">
-                                <rect key="frame" x="9" y="79" width="302" height="1245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tOq-zg-Zlu">
+                                <rect key="frame" x="40" y="173" width="240" height="241"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">http://atencionmayores.org/beneficios-baile-gente-mayor/
-http://www.who.int/dietphysicalactivity/factsheet_olderadults/es/
-http://www.fundaciondelcorazon.com/ejercicio/para-mayores/932-natacion-para-mayores.html
-http://www.innatia.com/s/c-ejercicio-tercera-edad/a-caminar-en-tercera-edad.html 
-https://sumedico.com/pasear-perrito-la-clave-una-vejez-saludable/
-https://misanimales.com/beneficios-de-las-mascotas-en-personas-mayores/ 
-https://www.efisioterapia.net/articulos/programa-actividad-fisica-el-adulto-mayor-independiente
-https://www.efisioterapia.net/articulos/programa-actividad-fisica-el-adulto-mayor-independiente
-https://www.lifeder.com/juegos-para-personas-mayores/
-http://www.who.int/dietphysicalactivity/factsheet_olderadults/es/ 
-https://www.mouthhealthy.org/es-MX/az-topics/a/aging-and-dental-health
-https://muyfitness.com/juegos-de-memoria-para-personas-de-la-tercera-edad_13132968/
-http://www.ajedrezypsicologia.com/ensenar-ajedrez-a-adultos/
-https://despuesdelos40.com/salud/las-ventajas-del-juego-de-ajedrez-en-adultos/
-http://www.lanuevarutadelempleo.com/Noticias/mandalas-como-terapia-en-la-tercera-edad
-https://www.casadelpuzzle.com/blog/2016/06/27/beneficios-de-hacer-puzzles-a-cualquier-edad/ 
-http://adultosmayores.hidalgo.gob.mx/?p=689
-http://www.sudoku-online.org
-https://www.qmayor.com/cultura/yo-de-mayor-quiero-ser-joven-leopoldo-abadia/
-https://www.adultomayorpleno.com/2010/10/consejos-financieros-para-el-adulto.html 
-https://www.eltelegrafo.com.ec/noticias/palabra/17/los-adultos-mayores-que-confian-en-su-fe-o-en-la-oracion-tienen-menos-temores
-https://www.adultomayorpleno.com/2010/10/consejos-financieros-para-el-adulto.html
-</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">Toda la información presentada se obtuvo de diversas fuentes digitales, los crédito de las imágenes son para sus autores (se revisó no infringir derecho de autor), y fueron usados en esta aplicación sin fines de lucro.  Para ver las fuentes entrar a: https://bit.ly/2KIcatZ</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tOq-zg-Zlu" firstAttribute="top" secondItem="kGV-jX-Jnx" secondAttribute="top" constant="109" id="ElE-Ia-TuL"/>
+                            <constraint firstItem="kGV-jX-Jnx" firstAttribute="trailing" secondItem="tOq-zg-Zlu" secondAttribute="trailing" constant="40" id="V6e-ZV-taY"/>
+                            <constraint firstItem="tOq-zg-Zlu" firstAttribute="leading" secondItem="kGV-jX-Jnx" secondAttribute="leading" constant="40" id="meA-7T-jXM"/>
+                            <constraint firstItem="kGV-jX-Jnx" firstAttribute="bottom" secondItem="tOq-zg-Zlu" secondAttribute="bottom" constant="154" id="qpz-23-0S8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kGV-jX-Jnx"/>
                     </view>
                 </viewController>
