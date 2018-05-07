@@ -10,6 +10,13 @@ import UIKit
 import CoreData
 
 class EditarContactosViewController: UIViewController, UITextFieldDelegate {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
    
     @IBOutlet weak var tfTelEmergencia: UITextField!
     @IBOutlet weak var tfNombreEmergencia: UITextField!

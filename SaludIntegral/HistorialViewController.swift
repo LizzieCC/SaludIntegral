@@ -9,6 +9,13 @@
 import UIKit
 
 class HistorialViewController: UIViewController {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
 
     @IBOutlet weak var btnSaludHist: UIButton!
     @IBOutlet weak var btnMentalHist: UIButton!

@@ -12,6 +12,13 @@ import CoreData
 
 class SugerenciasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate {
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBOutlet weak var tablaSugerencias: UITableView!
     @IBOutlet weak var tabBarAreas: UITabBar!
     

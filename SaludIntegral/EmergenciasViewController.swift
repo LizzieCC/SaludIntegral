@@ -10,6 +10,13 @@ import UIKit
 import CoreData
 
 class EmergenciasViewController: UIViewController {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
 
     @IBOutlet weak var lbNombreFamiliar: UILabel!
     @IBOutlet weak var lbNombreMedico: UILabel!
@@ -55,7 +62,7 @@ class EmergenciasViewController: UIViewController {
                     telMedico = contacto.telefono
                 } else if contacto.tipo == TipoContacto.Emergencias.rawValue {
                     lbNombreEmergencia.text = contacto.nombre
-                    telEmergencia = contacto.nombre
+                    telEmergencia = contacto.telefono
                 }
             }
         }

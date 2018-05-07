@@ -103,9 +103,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             //let vc = storyboard.instantiateViewController(withIdentifier: "Home")
             //let vcAgenda = storyboard.instantiateViewController(withIdentifier: "Agenda")
             //vc.navigationController?.pushViewController(vcAgenda, animated: true)
-            var navigationController: UINavigationController? = (self.window?.rootViewController as? UINavigationController)
+            let navigationController: UINavigationController? = (self.window?.rootViewController as? UINavigationController)
             
-            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
             navigationController?.popToRootViewController(animated: false)
             navigationController?.pushViewController(storyboard.instantiateViewController(withIdentifier: "Agenda"), animated: false)

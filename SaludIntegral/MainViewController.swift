@@ -9,6 +9,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
 
     @IBOutlet weak var btSuge: UIButton!
     @IBOutlet weak var btActividades: UIButton!

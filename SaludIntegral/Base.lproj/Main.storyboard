@@ -187,7 +187,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Menú" largeTitleDisplayMode="always" id="NYP-jG-XMV"/>
+                    <navigationItem key="navigationItem" title="Menú" largeTitleDisplayMode="always" id="NYP-jG-XMV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="6Zn-Hs-IGB">
+                            <connections>
+                                <segue destination="cyD-iB-12Q" kind="show" id="kAL-wU-VlB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btActividades" destination="T2y-it-PYI" id="M52-BW-FOo"/>
                         <outlet property="btEmergencias" destination="0Cx-NI-Mpu" id="rdz-9W-Dfi"/>
@@ -1140,6 +1146,117 @@
             </objects>
             <point key="canvasLocation" x="2379.375" y="280.98591549295776"/>
         </scene>
+        <!--Bibliografía-->
+        <scene sceneID="L7d-F0-Dcc">
+            <objects>
+                <viewController title="Bibliografía" id="fj1-bg-VS7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uXe-S4-GL8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hSj-Ri-kDP">
+                                <rect key="frame" x="9" y="79" width="302" height="1245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">http://atencionmayores.org/beneficios-baile-gente-mayor/
+http://www.who.int/dietphysicalactivity/factsheet_olderadults/es/
+http://www.fundaciondelcorazon.com/ejercicio/para-mayores/932-natacion-para-mayores.html
+http://www.innatia.com/s/c-ejercicio-tercera-edad/a-caminar-en-tercera-edad.html 
+https://sumedico.com/pasear-perrito-la-clave-una-vejez-saludable/
+https://misanimales.com/beneficios-de-las-mascotas-en-personas-mayores/ 
+https://www.efisioterapia.net/articulos/programa-actividad-fisica-el-adulto-mayor-independiente
+https://www.efisioterapia.net/articulos/programa-actividad-fisica-el-adulto-mayor-independiente
+https://www.lifeder.com/juegos-para-personas-mayores/
+http://www.who.int/dietphysicalactivity/factsheet_olderadults/es/ 
+https://www.mouthhealthy.org/es-MX/az-topics/a/aging-and-dental-health
+https://muyfitness.com/juegos-de-memoria-para-personas-de-la-tercera-edad_13132968/
+http://www.ajedrezypsicologia.com/ensenar-ajedrez-a-adultos/
+https://despuesdelos40.com/salud/las-ventajas-del-juego-de-ajedrez-en-adultos/
+http://www.lanuevarutadelempleo.com/Noticias/mandalas-como-terapia-en-la-tercera-edad
+https://www.casadelpuzzle.com/blog/2016/06/27/beneficios-de-hacer-puzzles-a-cualquier-edad/ 
+http://adultosmayores.hidalgo.gob.mx/?p=689
+http://www.sudoku-online.org
+https://www.qmayor.com/cultura/yo-de-mayor-quiero-ser-joven-leopoldo-abadia/
+https://www.adultomayorpleno.com/2010/10/consejos-financieros-para-el-adulto.html 
+https://www.eltelegrafo.com.ec/noticias/palabra/17/los-adultos-mayores-que-confian-en-su-fe-o-en-la-oracion-tienen-menos-temores
+https://www.adultomayorpleno.com/2010/10/consejos-financieros-para-el-adulto.html
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="kGV-jX-Jnx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cay-y4-Z4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1535.625" y="-1511.6197183098591"/>
+        </scene>
+        <!--Créditos-->
+        <scene sceneID="WIR-Ph-mT1">
+            <objects>
+                <viewController title="Créditos" id="cyD-iB-12Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1HY-aJ-1ja">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLe-BP-yrQ">
+                                <rect key="frame" x="29" y="100" width="262" height="203"/>
+                                <string key="text">"Salud Integral" ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Enero Mayo de 2018, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño. </string>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d20-pO-jkf">
+                                <rect key="frame" x="40" y="512" width="240" height="30"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Imágenes y fuentes de info."/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="fj1-bg-VS7" kind="show" id="bTt-3S-2Z1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC1-hQ-HfU">
+                                <rect key="frame" x="23" y="325" width="275" height="162.5"/>
+                                <string key="text">Desarrolladores: 
+Lizzie Cañamar Uriel Salazar Luisa Pineda
+"Salud Integral" se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QsR-0D-cdq" firstAttribute="trailing" secondItem="eLe-BP-yrQ" secondAttribute="trailing" constant="29" id="7ba-TN-MyN"/>
+                            <constraint firstItem="eLe-BP-yrQ" firstAttribute="leading" secondItem="QsR-0D-cdq" secondAttribute="leading" constant="29" id="HEt-Hv-tWm"/>
+                            <constraint firstItem="nC1-hQ-HfU" firstAttribute="top" secondItem="eLe-BP-yrQ" secondAttribute="bottom" constant="22" id="dPM-4z-5HH"/>
+                            <constraint firstItem="d20-pO-jkf" firstAttribute="leading" secondItem="QsR-0D-cdq" secondAttribute="leading" constant="40" id="dTp-wg-fbZ"/>
+                            <constraint firstItem="QsR-0D-cdq" firstAttribute="bottom" secondItem="d20-pO-jkf" secondAttribute="bottom" constant="26" id="mh4-ua-3bj"/>
+                            <constraint firstItem="eLe-BP-yrQ" firstAttribute="top" secondItem="QsR-0D-cdq" secondAttribute="top" constant="36" id="mxB-Wn-Xq5"/>
+                            <constraint firstItem="QsR-0D-cdq" firstAttribute="trailing" secondItem="nC1-hQ-HfU" secondAttribute="trailing" constant="22" id="nSs-ZO-EqP"/>
+                            <constraint firstItem="QsR-0D-cdq" firstAttribute="trailing" secondItem="d20-pO-jkf" secondAttribute="trailing" constant="40" id="p5a-aq-9sx"/>
+                            <constraint firstItem="nC1-hQ-HfU" firstAttribute="leading" secondItem="QsR-0D-cdq" secondAttribute="leading" constant="23" id="tiS-2d-h24"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QsR-0D-cdq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROe-Ee-9t4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729.375" y="-1511.6197183098591"/>
+        </scene>
         <!--Agenda-->
         <scene sceneID="lFB-mr-m8g">
             <objects>
@@ -1330,7 +1447,7 @@
                                     <segment title="Físico"/>
                                     <segment title="Mental"/>
                                     <segment title="Finanzas"/>
-                                    <segment title="Espiritual"/>
+                                    <segment title="Personal"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOq-MO-GWE">

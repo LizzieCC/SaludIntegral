@@ -14,6 +14,13 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         //
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
 
     @IBOutlet weak var pickerFechaUnica: UIDatePicker!
     @IBOutlet weak var tfNombre: UITextField!

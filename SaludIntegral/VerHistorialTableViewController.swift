@@ -25,6 +25,12 @@ class ProgresoActividad {
 
 class VerHistorialTableViewController: UITableViewController {
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
     
     var actividades: [ProgresoActividad] = []
     var area: Area!
@@ -39,7 +45,7 @@ class VerHistorialTableViewController: UITableViewController {
         } else if area == Area.Financiero {
             title = "Finanzas"
         } else if area == Area.Espiritual {
-            title = "Espiritual"
+            title = "Personal"
         }
         obtenerActividades()
         

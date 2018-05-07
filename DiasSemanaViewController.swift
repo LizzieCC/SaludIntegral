@@ -9,6 +9,14 @@
 import UIKit
 
 class DiasSemanaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     var diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
     var diasSeleccionados = [Bool]()
     

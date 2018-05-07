@@ -11,6 +11,13 @@ import CoreData
 
 class ReprogramarActividadViewController: UIViewController {
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     var actividadAReprogramar: ActividadDia!
     
     @IBOutlet weak var scrollView: UIScrollView!

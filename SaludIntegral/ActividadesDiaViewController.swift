@@ -12,6 +12,13 @@ import CoreData
 
 class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBOutlet weak var tablaActividades: UITableView!
     @IBOutlet weak var lbDia: UILabel!
     
