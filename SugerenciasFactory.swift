@@ -37,7 +37,7 @@ class SugerenciasFactory {
         
         let sugerencia2 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia2.area = Int32(Area.Fisico.rawValue)
-        sugerencia2.titulo = "Realiza aeróbicos a diario"
+        sugerencia2.titulo = "Realizar aeróbicos a diario"
         sugerencia2.descripcion = "Este ejercicio otorga un mejor funcionamiento del sistema cardiorrespiratorio y muscular, así como una mejor masa y composición corporal. Cuando personas de la tercera edad mejoran su aptitud física con ejercicios aeróbicos también se reflejan beneficios en cuanto a la memoria."
         sugerencia2.imagen = "https://image.ibb.co/dPWXjx/aeronics.png"
         sugerencia2.prioridad = 1
@@ -63,7 +63,7 @@ class SugerenciasFactory {
         
         let sugerencia5 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia5.area = Int32(Area.Fisico.rawValue)
-        sugerencia5.titulo = "Camina 25 minutos diariamente"
+        sugerencia5.titulo = "Caminar 25 minutos diariamente"
         sugerencia5.descripcion = "La práctica regular de caminatas te permite ir alineando los segmentos corporales y mejorar tu postura, convirtiéndose esta en una actividad física constante. Te recomendamos estirar tu columna vertical como si te estuvieran tirando con una cuerda desde el centro de la cabeza al caminar y de manera relajada."
         sugerencia5.imagen = "https://image.ibb.co/jNrMcH/camina.png"
         sugerencia5.prioridad = 1
@@ -108,7 +108,7 @@ class SugerenciasFactory {
         
         let sugerencia10 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia10.area = Int32(Area.Fisico.rawValue)
-        sugerencia10.titulo = "Concilia el sueño"
+        sugerencia10.titulo = "Conciliar el sueño"
         sugerencia10.descripcion = "Para tener una mente sana y un cuerpo sano, es necesario tomar un sueño reparador. No se trata de dormir más tiempo, si no de hacer ese tiempo efectivo y tomar ciertas medidas para lograrlo como contar con un horario de sueño definido y evitar siestas de más de 30 minutos. Una ducha antes de dormir ayuda."
         sugerencia10.imagen = "https://image.ibb.co/dFMbBc/dormir.png"
         sugerencia10.prioridad = 1
@@ -118,7 +118,7 @@ class SugerenciasFactory {
         
         let sugerencia11 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia11.area = Int32(Area.Mental.rawValue)
-        sugerencia11.titulo = "Realiza pulseras "
+        sugerencia11.titulo = "Realizar pulseras "
         sugerencia11.descripcion = "Fomenta la concentración y atención en esta gran actividad, además de poner a prueba tu creatividad y destreza manual. Te mostramos un vídeo con algunos tipos de pulseras que puedes realizar de manera sencilla y con materiales sencillos de conseguir. "
         sugerencia11.imagen = "https://image.ibb.co/mv5KWc/pulseras.png"
         sugerencia11.video="https://www.youtube.com/watch?v=YdSMK3bJ3RY"
@@ -127,7 +127,7 @@ class SugerenciasFactory {
         
         let sugerencia12 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia12.area = Int32(Area.Mental.rawValue)
-        sugerencia12.titulo = "Juega Memorama"
+        sugerencia12.titulo = "Jugar Memorama"
         sugerencia12.descripcion = "Puedes mejorar tu memoria poniendo en práctica una diversidad de juegos diseñados para aumentar la agudeza y la percepción, como el memorama, que cuenta con el beneficio añadido de ser divertidos y de estimular la unión y tu espíritu con el de tu oponente."
         sugerencia12.imagen = "https://image.ibb.co/gNsoPx/memorama.png"
         sugerencia12.prioridad = 1
@@ -152,7 +152,7 @@ class SugerenciasFactory {
         
         let sugerencia15 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia15.area = Int32(Area.Mental.rawValue)
-        sugerencia15.titulo = "Arma un rompecabezas"
+        sugerencia15.titulo = "Armar un rompecabezas"
         sugerencia15.descripcion = "Los rompecabezas son divertidos y además promueve el uso del cerebro y de la imaginación. Te recomendamos tanto jugarlo solo o acompañado de familia, para pasar también un rato agradable con ellos. Y recuerda.. tendrás una gran sensación de satisfacción al terminarlo."
         sugerencia15.imagen = "https://image.ibb.co/kHHoPx/puzzle.png"
         sugerencia15.prioridad = 1
@@ -160,7 +160,7 @@ class SugerenciasFactory {
         
         let sugerencia16 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia16.area = Int32(Area.Mental.rawValue)
-        sugerencia16.titulo = "Juega una partida de Sudoku"
+        sugerencia16.titulo = "Jugar una partida de Sudoku"
         sugerencia16.descripcion = "La ventaja de este juego es que existen niveles para principiantes, intermedios y avanzados, y no es necesario ser un genio matemático para resolverlo. Sudoku es desafiante, mejora la memoria y estimula la mente, además de sentirte relajado y feliz. "
         sugerencia16.imagen = "https://image.ibb.co/iXLWcH/sudoku.png"
         sugerencia16.prioridad = 1
@@ -168,7 +168,7 @@ class SugerenciasFactory {
         
         let sugerencia17 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia17.area = Int32(Area.Mental.rawValue)
-        sugerencia17.titulo = "Resuelve un crucigrama"
+        sugerencia17.titulo = "Resolver un crucigrama"
         sugerencia17.descripcion = "Juegos como el crucigrama mejoran la memoria y pueden ayudar a mantener el cerebro hasta quince años más joven en las personas que han superado los sesenta. Te recomendamos la aplicación de “Crucigramas Free” para probar con algunos, o puedes hacerlo de la forma tradicional con libros."
         sugerencia17.imagen = "https://image.ibb.co/fKf8Px/crucigrama.png"
         sugerencia17.prioridad = 1
@@ -185,7 +185,7 @@ class SugerenciasFactory {
         
         let sugerencia19 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia19.area = Int32(Area.Mental.rawValue)
-        sugerencia19.titulo = "Damas chinas"
+        sugerencia19.titulo = "Jugar damas chinas"
         sugerencia19.descripcion = "Busca a algún familiar y juega una partida de damas chinas. Si no sabes las reglas del juego te dejamos este vídeo en donde puedes aprender el reglamente del juego. "
         sugerencia19.video = "https://www.youtube.com/watch?v=1s8VCq2Z5NE"
         sugerencia19.imagen = "https://image.ibb.co/gYRF4x/damaschinas.png"
@@ -236,7 +236,7 @@ class SugerenciasFactory {
         
         let sugerencia25 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia25.area = Int32(Area.Financiero.rawValue)
-        sugerencia25.titulo = "Ahorra con la ayuda de una aplicación"
+        sugerencia25.titulo = "Ahorrar con la ayuda de una aplicación"
         sugerencia25.descripcion = "¿Tienes algún viaje que quieres completar? ¿O algo que quieras comprar? Existen aplicaciones como piggo que te ayudan a realizar un estimado del dinero que requieres para cumplir tu meta, y te dice cuánto debes ahorrar por semana o mes. Podrás ir viendo como avanzas para llegar a tu meta."
         sugerencia25.imagen = "https://image.ibb.co/epTQGx/ahorrar.png"
         sugerencia25.prioridad = 1
@@ -244,7 +244,7 @@ class SugerenciasFactory {
         
         let sugerencia26 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia26.area = Int32(Area.Financiero.rawValue)
-        sugerencia26.titulo = "Registrar tus gastos diarios"
+        sugerencia26.titulo = "Registrar gastos diarios"
         sugerencia26.descripcion = "Verifica cada noche cuáles fueron los gastos que realizaste en el transcurso del día. Puedes registrarlos en una libreta o alguna aplicación, con el fin de no desbalancear tus egresos e ingresos. "
         sugerencia26.prioridad = 1
         sugerencia26.imagen = "https://image.ibb.co/kiZnUH/registrargastosdiarios.png"
@@ -253,7 +253,7 @@ class SugerenciasFactory {
         
         let sugerencia27 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia27.area = Int32(Area.Financiero.rawValue)
-        sugerencia27.titulo = "Planea tus gastos semanales"
+        sugerencia27.titulo = "Planear gastos semanales"
         sugerencia27.descripcion = "Un día a la semana (te recomendamos que un domingo o un lunes) anota los gastos que realizarás en la semana con el monto aproximado. Durante la semana, podrás monitorear en base a este plan, si estás gastando más de lo que habías considerado. "
         sugerencia27.prioridad = 1
         sugerencia27.imagen = "https://image.ibb.co/cs7kGx/planeargastossemanales.png"
@@ -272,7 +272,7 @@ class SugerenciasFactory {
         
         let sugerencia32 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia32.area = Int32(Area.Espiritual.rawValue)
-        sugerencia32.titulo = "Realiza yoga"
+        sugerencia32.titulo = "Realizar yoga"
         sugerencia32.descripcion = "El yoga puede ser una compañía para toda la vida, ayudándote a mantener un amplio rango de movilidad, flexibilidad, estabilidad, equilibrio físico y mental. Ayuda a mantener una buena actitud y estado de ánimo positivo. Se recomienda que se realicen ejercicios de yoga todos los días, para tener un cuerpo sano."
         sugerencia32.video="https://youtu.be/F8bNQ7UWJII"
         sugerencia32.imagen = "https://image.ibb.co/c9MUbx/yoga.png"
@@ -282,7 +282,7 @@ class SugerenciasFactory {
         
         let sugerencia33 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia33.area = Int32(Area.Espiritual.rawValue)
-        sugerencia33.titulo = "Realiza oración"
+        sugerencia33.titulo = "Hacer oración"
         sugerencia33.descripcion = "Una fuerte conexión espiritual puede mejorar la satisfacción con la vida o facilitar el adaptarse a determinados impedimentos. De igual manera, las creencias religiosas o espirituales contribuyen a la habilidad para enfrentar efectivamente  la enfermedad, discapacidad y eventos negativos."
         sugerencia33.imagen = "https://image.ibb.co/mOJaGx/oracion.png"
         sugerencia33.prioridad = 1
@@ -291,7 +291,7 @@ class SugerenciasFactory {
         
         let sugerencia34 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia34.area = Int32(Area.Espiritual.rawValue)
-        sugerencia34.titulo = "Ejercicios de autoestima"
+        sugerencia34.titulo = "Bienestar psicológico"
         sugerencia34.descripcion = "Trabajando tu autoestima hace que llegues a tener una muy buena actitud  si trabajas con constancia y dedicación, sintiéndote mejor. Si te interesa saber más sobre los conceptos de la autoestima, te dejamos el siguiente vídeo para que escuches a expertos hablar de este tema."
         sugerencia34.imagen = "https://image.ibb.co/i2uFGx/autoestima.png"
         sugerencia34.video = "https://www.youtube.com/watch?v=Go70CF3DwTY"
@@ -301,7 +301,7 @@ class SugerenciasFactory {
         
         let sugerencia35 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia35.area = Int32(Area.Espiritual.rawValue)
-        sugerencia35.titulo = "Toma aire y sal al parque"
+        sugerencia35.titulo = "Tomar aire y salir al parque"
         sugerencia35.descripcion = "¡Date un respiro! Ve al parque y siéntete como nuevo. Al respirar aire fresco, tu cuerpo absorbe oxígeno, eliminando las toxinas del organismo. Adiós al estrés y hola a la relajación del sistema nervioso contribuyendo a un estado de bienestar general. Busca sitios abiertos cerca de tu hogar."
         sugerencia35.imagen = "https://image.ibb.co/bTcrpH/parque.png"
         sugerencia35.prioridad = 1
@@ -310,7 +310,7 @@ class SugerenciasFactory {
         
         let sugerencia36 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia36.area = Int32(Area.Espiritual.rawValue)
-        sugerencia36.titulo = "Sal por un café con un viejo amigo"
+        sugerencia36.titulo = "Salir por un café con un viejo amigo"
         sugerencia36.descripcion = "¿En quién piensas cuando menciono la palabra Amigo? ¡Llámalo! Agenda una cita con él o ella para conversar por un rato y pasar un tiempo muy agradable. Te sugerimos ir por un café cercano a tu localidad, o ir a un restaurante por su comida favorita."
         sugerencia36.imagen = "https://image.ibb.co/iOVY3c/cafe.png"
         sugerencia36.prioridad = 1
@@ -318,7 +318,7 @@ class SugerenciasFactory {
         
         let sugerencia37 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia37.area = Int32(Area.Espiritual.rawValue)
-        sugerencia37.titulo = "Prueba la risoterapia"
+        sugerencia37.titulo = "Probar la risoterapia"
         sugerencia37.descripcion = "Conocida también como terapia de la risa, libera tensiones y te ríes de forma natural por un momento.Se usan bailes, juegos y masajes para lograr causar risa en las personas. ¡Ve el vídeo y aprende más de ello!"
         sugerencia37.video="https://www.youtube.com/watch?v=U5533X-m-i8"
         sugerencia37.imagen = "https://image.ibb.co/j8Gj9H/risoterapia.png"
@@ -327,7 +327,7 @@ class SugerenciasFactory {
         
         let sugerencia38 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia38.area = Int32(Area.Espiritual.rawValue)
-        sugerencia38.titulo = "Meditacion"
+        sugerencia38.titulo = "Hacer Meditación"
         sugerencia38.descripcion = "La meditación es realmente importante en cualquier edad y otorga muchos beneficios como aumentar la longevidad, disminuye la soledad y mejorar la memoria, la mente y el estado de ánimo. Te recomendamos buscar un lugar cómodo y escuchar la siguiente meditación. ¡Relájate y disfruta!"
         sugerencia38.video="https://www.youtube.com/watch?v=zkbssc2d2lA"
         sugerencia38.imagen = "https://image.ibb.co/bVr6Oc/meditacion.png"
@@ -336,7 +336,7 @@ class SugerenciasFactory {
         
         let sugerencia39 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia39.area = Int32(Area.Espiritual.rawValue)
-        sugerencia39.titulo = "Ve las noticias"
+        sugerencia39.titulo = "Estar actualizado"
         sugerencia39.descripcion = "Conoce qué está pasando a tu alrededor, enciende la televisión y ve las noticias o lee el periódico. Si prefieres verificar las noticias desde tu celular, te recomendamos buscar tu periódico o noticiero favorito en la AppStore y descargar la aplicación."
         sugerencia39.imagen = "https://image.ibb.co/mDB6Oc/noticias.png"
         sugerencia39.prioridad = 1
@@ -346,7 +346,7 @@ class SugerenciasFactory {
         
         let sugerencia40 = NSEntityDescription.insertNewObject(forEntityName: "Sugerencia", into: AppDelegate.context) as! Sugerencia
         sugerencia40.area = Int32(Area.Espiritual.rawValue)
-        sugerencia40.titulo = "Llama a tu familia"
+        sugerencia40.titulo = "Llamar a tu familia"
         sugerencia40.descripcion = "Una llamada a tu nieto, hijo, hermano o familiar mejora tu día en su totalidad. Cuentales que ha pasado en tus días y pregúntale por los suyos. Hablar con la familia incrementa tu estado de ánimo."
         sugerencia40.imagen = "https://image.ibb.co/bC6HUH/familia.png"
         sugerencia40.prioridad = 1
