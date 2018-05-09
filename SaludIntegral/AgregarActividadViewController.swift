@@ -9,11 +9,14 @@
 import UIKit
 import CoreData
 
+/// Controlador que se encarga de agregar una nueva actividad.
 class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
     func ponerDias(diasSeleccionados: [Bool]) {
         //
     }
     
+    /// No permite al dispositivo que se pueda rotar.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -21,24 +24,29 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         return false
     }
     
-
+    
     @IBOutlet weak var pickerFechaUnica: UIDatePicker!
     @IBOutlet weak var tfNombre: UITextField!
     @IBOutlet weak var tipoActividad: UISegmentedControl!
     @IBOutlet weak var horaAlarma: UIDatePicker!
     @IBOutlet weak var elegirDias: UIButton!
+    /// Determina si se fue a la pantalla de seleccionar las semanas para la actividad.
     var goWeek = false
     //@IBOutlet weak var weekTable: UITableView!
     var recibeSemana = [Bool]()
+    /// Determina si se guardara la actividad o no.
     var loGuardo = false
+    /// La informacion de la actividad que se quiere agregar.
     var nuevaActividad: Actividad!
+    /// Los tipos de frecuencia disponibles para la actividad.
     var arrayFrecuencias = ["Una vez", "Semanal"]
-    
+    /// Los dias de la semana que se seleccionaron para realizar la actividad.
     var diasSeleccionados = [false, false, false, false, false, false, false]
-    
+    /// La frecuencia que fue seleccionada por el usuario.
     var frecuenciaSeleccionada: String = ""
     @IBOutlet weak var pickerFrecuencia: UIPickerView!
     
+    /// Quita el teclado cuando el usuario deselecciona el campo.
     @IBAction func quitaTeclado() {
         view.endEditing(true)
     }
@@ -54,6 +62,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        // Crea una nueva actividad si no existe ya una definida.
         if(nuevaActividad == nil) {
             nuevaActividad = NSEntityDescription.insertNewObject(forEntityName: "Actividad", into: context) as! Actividad
         }
@@ -116,6 +125,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         actualizarFrecuencia()
     }
     
+    /// Muestra o quita los elementos de la nueva frecuencia seleccionada.
     func actualizarFrecuencia() {
         switch frecuenciaSeleccionada {
         case arrayFrecuencias[0]:
@@ -132,7 +142,7 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
     }
     
     
-    
+    /// Agrega la actividad a la base de datos.
     @IBAction func agregarActividad(_ sender: UIButton) {
         loGuardo = true
         print("unwind")
@@ -189,12 +199,15 @@ class AgregarActividadViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
+    /// Pasa los datos de los dias de la semana al ya seleccionarlos.
     @IBAction func unwindDiasSemana(unwindSegue: UIStoryboardSegue){
         print("unwind")
         dump(diasSeleccionados)
         
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Pasa los datos para poder seleccionar los dias de la semana.
         goWeek = true
         if segue.identifier == "tableWeekDays"{
             let vistaTabla = segue.destination as! DiasSemanaViewController
