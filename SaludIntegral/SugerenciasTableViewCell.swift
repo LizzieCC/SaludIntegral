@@ -8,12 +8,14 @@
 
 import UIKit
 
+/// Celda que contiene la informacion de una sugerencia.
 class SugerenciasTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lbTitulo: UILabel!
     @IBOutlet weak var lbDetalle: UILabel!
     @IBOutlet weak var imagen: UIImageView!
     
+    /// La sugerencia que se presentara en la celda.
     var sugerencia: Sugerencia!
     
     override func awakeFromNib() {
