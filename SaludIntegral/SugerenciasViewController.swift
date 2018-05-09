@@ -10,8 +10,10 @@ import UIKit
 import UserNotifications
 import CoreData
 
+/// Controlador que muestra todas las sugerencias.
 class SugerenciasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate {
     
+    /// No permite que el dispositivo se rote.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -22,8 +24,11 @@ class SugerenciasViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tablaSugerencias: UITableView!
     @IBOutlet weak var tabBarAreas: UITabBar!
     
+    /// Contiene la lista de todas las sugerencias que hay.
     var sugerencias = [Sugerencia]()
+    /// Contiene la lista de todas las sugerencias del area seleccionada.
     var sugerenciasActuales:  [Sugerencia] = []
+    /// El area actual seleccionado por el usuario.
     var areaActual: Area = Area.Fisico
 
     override func viewDidLoad() {
@@ -37,11 +42,12 @@ class SugerenciasViewController: UIViewController, UITableViewDelegate, UITableV
         actualizarSugerencias()
     }
     
-    
+    /// Ajusta el alto de las celdas para que sea visible las sugerencias.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
     
+    /// Pone la informacion de la sugerencia en la celda.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tablaSugerencias.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SugerenciasTableViewCell
         let sugerencia = sugerenciasActuales [indexPath.row]
@@ -73,6 +79,7 @@ class SugerenciasViewController: UIViewController, UITableViewDelegate, UITableV
         return sugerenciasActuales.count
     }
     
+    /// Determina cual es el area nuevo seleccionado por el usuario.
     func tabBar(_ tabBar: UITabBar, didSelect item:UITabBarItem) {
         var items = (self.tabBarAreas.items as! [UITabBarItem])
         if item == items[0] {
@@ -91,6 +98,7 @@ class SugerenciasViewController: UIViewController, UITableViewDelegate, UITableV
         actualizarSugerencias()
     }
     
+    /// Actualiza la informacion de las sugerencias en base al area seleccionado.
     func actualizarSugerencias() {
         let fetchSugerencias = NSFetchRequest<NSFetchRequestResult>(entityName: "Sugerencia")
         fetchSugerencias.predicate = NSPredicate(format: "area == \(areaActual.rawValue)")
@@ -103,6 +111,7 @@ class SugerenciasViewController: UIViewController, UITableViewDelegate, UITableV
         tablaSugerencias.reloadData()
     }
     
+    /// Pasa la informacion de la sugerencia para ver a detalle la sugerencia.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vista = segue.destination as! VerSugerenciaViewController
         let index = tablaSugerencias.indexPathForSelectedRow
