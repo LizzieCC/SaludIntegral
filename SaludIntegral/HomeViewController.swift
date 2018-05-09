@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+/// Controlador que tiene la vista principal de la aplicacion.
 class HomeViewController: UIViewController {
 
     
