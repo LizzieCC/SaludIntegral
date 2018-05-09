@@ -8,8 +8,10 @@
 
 import UIKit
 
+/// Controlador que tiene la vista principal de la aplicacion.
 class MainViewController: UIViewController {
     
+    /// No permite que el dispositivo se rote.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -21,6 +23,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var btActividades: UIButton!
     @IBOutlet weak var btEmergencias: UIButton!
     @IBOutlet weak var btHistorial: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //btSuge.titleLabel?.minimumScaleFactor = 0
