@@ -9,8 +9,10 @@
 import UIKit
 import CoreData
 
+/// Controlador que contiene y llama a los contactos de emergencia.
 class EmergenciasViewController: UIViewController {
     
+    /// No permite que el dispositivo se rote.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -25,8 +27,11 @@ class EmergenciasViewController: UIViewController {
     @IBOutlet weak var lbLlamar1: UIButton!
     @IBOutlet weak var btMedico: UIButton!
     @IBOutlet weak var btEmergencia: UIButton!
+    /// Contiene el telefono del familiar.
     var telFamilia : String!
+    /// Contiene el telefono del medico.
     var telMedico : String!
+    /// Contiene el telefono de emergencias.
     var telEmergencia : String!
     
     override func viewDidLoad() {
@@ -50,6 +55,7 @@ class EmergenciasViewController: UIViewController {
         obtenerDatosEmergencias()
     }
     
+    /// Obtiene la informacion de contactos de la base de datos.
     func obtenerDatosEmergencias() {
         do {
             let contactos = try AppDelegate.context.fetch(Contacto.fetchRequest()) as [Contacto]
@@ -71,7 +77,7 @@ class EmergenciasViewController: UIViewController {
         }
     }
     
-    
+    /// Llama al familiar.
     @IBAction func llamarFamiliar(_ sender: UIButton) {
         if telFamilia == nil {
             //No hay telefono
@@ -83,6 +89,7 @@ class EmergenciasViewController: UIViewController {
         }
     }
     
+    /// Llama al medico.
     @IBAction func llamarMedico(_ sender: UIButton) {
         if telMedico == nil {
             //No hay telefono
@@ -94,7 +101,7 @@ class EmergenciasViewController: UIViewController {
         }
     }
     
-    
+    /// Llama a emergencias.
     @IBAction func llamarEmergencia(_ sender: UIButton) {
         if telEmergencia == nil {
             //No hay telefono
