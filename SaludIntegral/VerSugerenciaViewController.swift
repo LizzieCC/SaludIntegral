@@ -8,9 +8,10 @@
 import UIKit
 import CoreData
 
-
+/// Controlador que muestra a detalle una sugerencia.
 class VerSugerenciaViewController: UIViewController {
     
+    /// No permite que el dispositivo se rote.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -22,7 +23,7 @@ class VerSugerenciaViewController: UIViewController {
     @IBOutlet weak var imageSugerencia: UIImageView!
     @IBOutlet weak var lbNombre: UILabel!
     @IBOutlet weak var webView: UIWebView!
-    
+    /// Contiene la informacion de la sugerencia actual.
     var sugerencia: Sugerencia!
     
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class VerSugerenciaViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    /// Carga el video de la sugerencia en caso de tener uno.
     func cargarVideo() {
         if let video = sugerencia.video {
             let url = URL(string: video)
@@ -49,7 +51,7 @@ class VerSugerenciaViewController: UIViewController {
         print("si llega a unwind ver sugerencia")
     }
     
-    
+    /// Manda la informacion de la actividad de la sugerencia para poderla agregar.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vista = segue.destination as! AgregarActividadViewController
         
