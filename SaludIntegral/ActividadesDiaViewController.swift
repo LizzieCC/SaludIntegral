@@ -221,10 +221,7 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Si se va a reprogramar actividad manda los datos que necesita.
-        if segue.identifier == "reprogramar" {
-            let vista = segue.destination as! ReprogramarActividadViewController
-            vista.actividadAReprogramar = actividadesRealizadas[actividadSeleccionado]
-        }
+        
         
     }
 

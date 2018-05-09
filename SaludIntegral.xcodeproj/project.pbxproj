@@ -33,7 +33,6 @@
 		6AAD69A32054C6FF00A39217 /* FrecuenciaMes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAD69A22054C6FF00A39217 /* FrecuenciaMes.swift */; };
 		6AAD69A52054C72F00A39217 /* FrecuenciaSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAD69A42054C72F00A39217 /* FrecuenciaSemana.swift */; };
 		6AF136A72074885E006F294C /* AgregarActividadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF136A62074885E006F294C /* AgregarActividadViewController.swift */; };
-		6AFFD7BD20900BE300A59612 /* ReprogramarActividadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFFD7BC20900BE300A59612 /* ReprogramarActividadViewController.swift */; };
 		C6C9D862209A37B5004142EB /* SugerenciasFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9D861209A37B5004142EB /* SugerenciasFactory.swift */; };
 		FB6EC6D52050638100F1B3A2 /* EmergenciasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6EC6D42050638100F1B3A2 /* EmergenciasViewController.swift */; };
 		FB6EC6D7205067DD00F1B3A2 /* SugerenciasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6EC6D6205067DD00F1B3A2 /* SugerenciasViewController.swift */; };
@@ -89,7 +88,6 @@
 		6AAD69A22054C6FF00A39217 /* FrecuenciaMes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrecuenciaMes.swift; sourceTree = "<group>"; };
 		6AAD69A42054C72F00A39217 /* FrecuenciaSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrecuenciaSemana.swift; sourceTree = "<group>"; };
 		6AF136A62074885E006F294C /* AgregarActividadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarActividadViewController.swift; sourceTree = "<group>"; };
-		6AFFD7BC20900BE300A59612 /* ReprogramarActividadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReprogramarActividadViewController.swift; sourceTree = "<group>"; };
 		C6C9D861209A37B5004142EB /* SugerenciasFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugerenciasFactory.swift; sourceTree = "<group>"; };
 		FB6EC6D42050638100F1B3A2 /* EmergenciasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergenciasViewController.swift; sourceTree = "<group>"; };
 		FB6EC6D6205067DD00F1B3A2 /* SugerenciasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugerenciasViewController.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				6A4625C02072B9E100556F8C /* GoogleService-Info.plist */,
 				FBED2F6220505B74005240E2 /* AppDelegate.swift */,
 				FBED2F6620505B74005240E2 /* Main.storyboard */,
-				6AFFD7BC20900BE300A59612 /* ReprogramarActividadViewController.swift */,
 				6AAB1CE4208FEF100057D8A3 /* ProgresoActividadTableViewCell.swift */,
 				6A4F5D9A208D70F600E7AC6E /* VerHistorialTableViewController.swift */,
 				6A4F5D98208D6E2600E7AC6E /* HistorialViewController.swift */,
@@ -461,7 +458,6 @@
 				6AF136A72074885E006F294C /* AgregarActividadViewController.swift in Sources */,
 				6A3971CC2079719300868647 /* ActividadesDiaViewController.swift in Sources */,
 				6A3971C420796AB800868647 /* Contacto+CoreDataProperties.swift in Sources */,
-				6AFFD7BD20900BE300A59612 /* ReprogramarActividadViewController.swift in Sources */,
 				FB6EC6D52050638100F1B3A2 /* EmergenciasViewController.swift in Sources */,
 				6A8F26C2205A82880095730F /* SaludIntegral.xcdatamodeld in Sources */,
 				6A3971C520796AB800868647 /* Actividad+CoreDataClass.swift in Sources */,
