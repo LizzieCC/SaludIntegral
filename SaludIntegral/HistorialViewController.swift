@@ -8,8 +8,10 @@
 
 import UIKit
 
+/// Controlador que muestra las areas con el historial de actividades realizadas.
 class HistorialViewController: UIViewController {
     
+    /// No permite que el dispositivo se rote.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -30,6 +32,7 @@ class HistorialViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    /// Manda el area a la vista del historial.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vista = segue.destination as! VerHistorialTableViewController
         if segue.identifier! == "Salud" {
