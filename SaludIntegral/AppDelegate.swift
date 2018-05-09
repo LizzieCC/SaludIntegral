@@ -66,7 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
-    
+    /// Agrega una nueva notificacion de una actividad que esta programada para hoy.
+    ///
+    /// - parameter actividad: La actividad de la cual se desea agregar una notificacion.
     func agregarNotificacion(actividad: Actividad) {
         if let alarma = actividad.alarma as Date? {
             let tomorrow = Date().tomorrow
@@ -97,6 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         completionHandler(.alert)
     }
     
+    /// Realiza la accion dada por el usuario sobre la notificacion mandada.
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.actionIdentifier == "reprogramar.action" {
             //let storyboard = UIStoryboard(name: "Main", bundle: nil)
