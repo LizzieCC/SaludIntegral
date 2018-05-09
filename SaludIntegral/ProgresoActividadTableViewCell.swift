@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Celda que contiene el progreso de una cierta actividad.
 class ProgresoActividadTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lbProgreso: UILabel!
