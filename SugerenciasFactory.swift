@@ -9,7 +9,9 @@
 import UIKit
 import CoreData
 
+/// Se encarga de llenar la aplicacion con sugerencias en caso de que no las tenga.
 class SugerenciasFactory {
+    /// Llena en la base de datos todas las sugerencias.
     static func agregarSugerencias() {
         let fetchSugerencias = NSFetchRequest<NSFetchRequestResult>(entityName: "Sugerencia")
         do {
