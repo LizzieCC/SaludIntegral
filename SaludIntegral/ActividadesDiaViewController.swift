@@ -10,6 +10,7 @@ import UIKit
 import UserNotifications
 import CoreData
 
+/// Maneja la agenda de todas las actividades.
 class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -22,9 +23,13 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var tablaActividades: UITableView!
     @IBOutlet weak var lbDia: UILabel!
     
+    /// Contiene el template de las actividades que se deben realizar el dia seleccionado.
     var actividadesHoy: [Actividad] = []
+    /// Contiene las actividades que se deben realizar el dia seleccionado.
     var actividadesRealizadas: [ActividadDia] = []
+    /// El dia actual que fue seleccionado por el usuario.
     var diaSeleccionado: Date = Date()
+    /// Contiene referencia de la actividad que se selecciono al picarle.
     var actividadSeleccionado: Int!
     
     override func viewDidLoad() {
@@ -42,6 +47,7 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         super.didReceiveMemoryWarning()
     }
     
+    /// Agrega la opcion de reprogramar en sus acciones.
     func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let reprogramarAction = UITableViewRowAction(style: .normal, title: "Reprogramar") { action, index in
             
@@ -50,6 +56,9 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         return [reprogramarAction]
     }
     
+    /// Obteiene todas las actividades que e van a realizar el dia seleccionado en base a un template.
+    ///
+    /// - parameter actividad: Contiene el template de la actividad del cual se desea todas sus actividades del dia seleccionado.
     func obtenerActividadDia(actividad: Actividad) {
         do {
             var calendar = Calendar.current
@@ -76,10 +85,12 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+    /// Obtiene todos los datos de las actividades del dia seleccionado.
     func obtenerDatosActividades() {
         actividadesHoy.removeAll()
         actividadesRealizadas.removeAll()
         
+        // Obtiene las actividades semanales
         let fetchActividades = NSFetchRequest<NSFetchRequestResult>(entityName: "Actividad")
         fetchActividades.predicate = NSPredicate(format: "tipoFrecuencia == \(TipoFrecuencia.Semanal.rawValue)")
         do {
@@ -107,6 +118,7 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         
         //let fetchActividades = NSFetchRequest<NSFetchRequestResult>(entityName: "Actividad")
         
+        // Obtiene las actividades que se realizan una sola vez.
         var calendar = Calendar.current
         calendar.timeZone = NSTimeZone.local
         let dateFrom = calendar.startOfDay(for: diaSeleccionado)
@@ -127,32 +139,37 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         tablaActividades.reloadData()
     }
     
+    /// Cambia las actividades al dia anterior del actual.
     @IBAction func anteriorDia(_ sender: UIButton) {
         diaSeleccionado = diaSeleccionado.yesterday
         actualizarDia()
         obtenerDatosActividades()
     }
     
-    
+    /// Cambia las actividades al dia posterior del actual.
     @IBAction func siguienteDia(_ sender: UIButton) {
         diaSeleccionado = diaSeleccionado.tomorrow
         actualizarDia()
         obtenerDatosActividades()
     }
     
+    /// Actualiza el texto del dia actual al nuevo dia seleccionado.
     func actualizarDia() {
         lbDia.text = String(describing: diaSeleccionado.dayOfWeek()!) + ", " +
         (diaSeleccionado.toDateString()!)
     }
     
+    /// Recarga los datos de las actividades.
     func actualizarActividades() {
         tablaActividades.reloadData()
     }
     
+    /// Ajusta el alto de las celda de la tabla para que se vea de forma correcta.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
     
+    /// Modifica la celda para que contenga un el titulo de la actividad y un checkbox que indica si fue realizada la actividad o no.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tablaActividades.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         let actividad = actividadesHoy [indexPath.row]
@@ -171,10 +188,12 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        // Mantiene registro de la celda seleccionada.
         actividadSeleccionado = indexPath.row
         return indexPath
     }
     
+    /// Actualiza si la actividad fue realizada o no, cambiandolo en la base de datos.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         actividadesRealizadas[indexPath.row].realizado = !actividadesRealizadas[indexPath.row].realizado
         do {
@@ -186,6 +205,10 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+    /// Agrega el checkbox dejandolo checked o unchecked dependiendo de si fue realizado o no.
+    ///
+    /// - parameter cell: Contiene la celda que se desea modificar su checkbox.
+    /// - parameter filled: Si se pondra checked o unchecked en el checkbox.
     func setCellAccesory(cell: UITableViewCell, filled: Bool){
         var image = #imageLiteral(resourceName: "uncheck")
         if filled {
@@ -197,6 +220,7 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Si se va a reprogramar actividad manda los datos que necesita.
         if segue.identifier == "reprogramar" {
             let vista = segue.destination as! ReprogramarActividadViewController
             vista.actividadAReprogramar = actividadesRealizadas[actividadSeleccionado]
@@ -206,7 +230,11 @@ class ActividadesDiaViewController: UIViewController, UITableViewDelegate, UITab
 
 }
 
+/// Contiene extensiones utiles para obtener fechas.
 extension Date {
+    /// Obtiene el dia de la semana en texto.
+    ///
+    /// - returns: El nombre del dia de la semana.
     func dayOfWeek() -> String? {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "es_MX")
@@ -214,10 +242,16 @@ extension Date {
         return dateFormatter.string(from: self).capitalized
     }
     
+    /// Obtiene el dia de la semana.
+    ///
+    /// - returns: El numero del dia de la semana.
     func dayNumberOfWeek() -> Int! {
         return Calendar.current.dateComponents([.weekday], from: self).weekday
     }
     
+    /// Convierte la fecha en texto legible, mostrando mes y dia.
+    ///
+    /// - returns: Mes y dia de la fecha.
     func toDateString() -> String! {
         let formatter = DateFormatter()
         formatter.dateFormat = "LLLL dd"
@@ -226,26 +260,51 @@ extension Date {
         return diaFormateado
     }
     
+    /// Convierte la fecha en un timestamp.
+    ///
+    /// - returns: El timestamp de la fecha.
     func toTimestamp() -> Int? {
         return Int((self.timeIntervalSince1970 * 1000.0).rounded())
     }
     
+    /// Obtiene la fecha anterior al seleccionado.
+    ///
+    /// - returns: El dia anterior de la fecha.
     var yesterday: Date {
         return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
     }
+
+    /// Obtiene la fecha despues al seleccionado.
+    ///
+    /// - returns: El dia posterior de la fecha.
     var tomorrow: Date {
         return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
     }
+
+    /// Obtiene la madrugada de la fecha.
+    ///
+    /// - returns: La fecha en la madrugada.
     var noon: Date {
         return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
     }
+
+    /// Obtiene el mes de la fecha.
+    ///
+    /// - returns: El numero del mes de la fecha.
     var month: Int {
         return Calendar.current.component(.month,  from: self)
     }
+
+    /// Checa si la fecha es el ultimo dia del mes.
+    ///
+    /// - returns: Si o no es el ultimo dia del mes.
     var isLastDayOfMonth: Bool {
         return tomorrow.month != month
     }
     
+    /// Obtiene el dia actual en formato de fecha.
+    ///
+    /// - returns: El texto de la fecha.
     func getTodayString() -> String{
         
         let date = self
@@ -265,10 +324,16 @@ extension Date {
         
     }
     
+    /// Obtiene el primer dia del mes de la fecha.
+    ///
+    /// - returns: La fecha del inicio de mes.
     func startOfMonth() -> Date {
         return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
     }
     
+    /// Obtiene el ultimo dia del mes de la fecha.
+    ///
+    /// - returns: La fecha del final de mes.
     func endOfMonth() -> Date {
         return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
     }
