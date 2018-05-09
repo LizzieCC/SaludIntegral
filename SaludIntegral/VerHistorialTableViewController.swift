@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+/// Contiene informacion del progreso de una actividad.
 class ProgresoActividad {
     init(titulo: String, porcentaje: Float, hechos: Int, todos: Int) {
         self.titulo = titulo
@@ -23,8 +24,10 @@ class ProgresoActividad {
     var hechos: Int!
 }
 
+/// Controlador que muestra el progreso por semana de las actividades de un area.
 class VerHistorialTableViewController: UITableViewController {
     
+    /// No permite que el dispositivo se rote.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -32,7 +35,9 @@ class VerHistorialTableViewController: UITableViewController {
         return false
     }
     
+    /// Contiene el progreso de todas las actividades del area.
     var actividades: [ProgresoActividad] = []
+    /// El area del cual se quiere ver su progreso.
     var area: Area!
 
     override func viewDidLoad() {
@@ -51,6 +56,7 @@ class VerHistorialTableViewController: UITableViewController {
         
     }
     
+    /// Obtiene el progreso de todas las actividades de un area de la base de datos.
     func obtenerActividades() {
         do {
             let date = Date()
@@ -91,6 +97,7 @@ class VerHistorialTableViewController: UITableViewController {
         return actividades.count
     }
     
+    /// Llena la celda con la informacion del progreso de la actividad.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProgresoActividadTableViewCell
         cell.progressView.progress = actividades[indexPath.row].porcentaje
@@ -102,6 +109,7 @@ class VerHistorialTableViewController: UITableViewController {
         return cell
     }
     
+    /// Ajusta las celdas de la tabla para que sea visible el progreso.
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
