@@ -9,8 +9,10 @@
 import UIKit
 import CoreData
 
+/// Controlador encargado de editar la informacion de los contactos.
 class EditarContactosViewController: UIViewController, UITextFieldDelegate {
     
+    /// No permite que el dispositivo se rote.
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -25,7 +27,9 @@ class EditarContactosViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfTelFamilia: UITextField!
     @IBOutlet weak var tfNombreFamilia: UITextField!
     var activeField : UITextField!
+    /// Si se deberia o no mover la vista por el teclado.
     var moveKey = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
@@ -34,10 +38,12 @@ class EditarContactosViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(EditarContactosViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
+    /// Quita el teclado cuando el usuario deselecciona el campo.
     @IBAction func quitaTeclado() {
         view.endEditing(true)
     }
     
+    /// Se configura para que cuando se muestre el teclado se mueva la vista para arriba.
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 && moveKey{
@@ -46,6 +52,7 @@ class EditarContactosViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    /// Se configura para que se regrese a su estado original cualel teclado desaparezca.
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0 && moveKey{
@@ -54,7 +61,7 @@ class EditarContactosViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-
+    /// Determina si un textfield necesita que se mueva la vista hacia arriba.
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("did begin")
         if textField.tag == 1 || textField.tag == 2 {
@@ -73,6 +80,7 @@ class EditarContactosViewController: UIViewController, UITextFieldDelegate {
         getData()
     }
     
+    /// Obtiene todos los datos de los contactos (familiar, medico y emergencias)
     func getData() {
         do {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contacto")
@@ -107,6 +115,7 @@ class EditarContactosViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    /// Guarda la informacion de los contactos en la base de datos.
     func guardar(tipo: TipoContacto, nombre: String, telefono: String) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contacto")
         request.predicate = NSPredicate(format: "tipo == \(tipo.rawValue)")
@@ -142,6 +151,7 @@ class EditarContactosViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    /// Checa y guarda, si esta correcto, la informacion de los contactos.
     @IBAction func guardarContactos(_ sender: UIButton) {
         if(!(tfNombreFamilia.text?.isEmpty)! && !(tfTelFamilia.text?.isEmpty)! && !(tfNombreMedico.text?.isEmpty)! && !(tfTelMedico.text?.isEmpty)! && !(tfNombreEmergencia.text?.isEmpty)! && !(tfTelEmergencia.text?.isEmpty)!) {
             guardar(tipo: TipoContacto.Familiar, nombre: tfNombreFamilia.text!, telefono: tfTelFamilia.text!)
